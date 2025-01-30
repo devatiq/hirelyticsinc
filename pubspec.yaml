@@ -51,6 +51,7 @@ dependencies:
 
   # ui
   gap: ^3.0.1
+  countup: ^0.1.4
 
   # permission handler
   permission_handler: ^11.3.1
@@ -73,6 +74,9 @@ dev_dependencies:
   # generators
   riverpod_generator: ^2.6.4
   build_runner: ^2.4.14
+
+
+
 
 flutter:
   uses-material-design: true

@@ -1,3 +1,4 @@
+import 'package:countup/countup.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:gap/gap.dart';
@@ -35,7 +36,7 @@ class MobileHomeSection extends StatelessWidget {
           ),
           const Gap(16),
           InkWell(
-            onTap: (){},
+            onTap: () {},
             child: Container(
               padding: EdgeInsets.symmetric(
                   horizontal: Dimens.padding24, vertical: Dimens.padding16),
@@ -51,24 +52,29 @@ class MobileHomeSection extends StatelessWidget {
             ),
           ),
           const Gap(24),
-          _buildTextData(
+          _buildCountingTextData(
             context,
-            title: '44%',
+            count: 44,
+            countExtension: '%',
             subtitle:
                 'of companies don’t use data analytics to improve their hiring process',
+            titleColor: AppColors.colorBlack,
           ),
           Gap(8),
-          _buildTextData(context,
-              title: '40%',
+          _buildCountingTextData(context,
+              count: 40,
+              countExtension: '%',
               subtitle:
                   'faster time-to-hire for companies using data-driven strategies',
               titleColor: Theme.of(context).primaryColor),
           Gap(8),
-          _buildTextData(
+          _buildCountingTextData(
             context,
-            title: '3x',
+            count: 3,
+            countExtension: 'x',
             subtitle:
                 'more accurate candidate selection powered by predictive analytics',
+            titleColor: AppColors.colorBlack,
           ),
           Gap(32),
         ],
@@ -76,19 +82,37 @@ class MobileHomeSection extends StatelessWidget {
     );
   }
 
-  Widget _buildTextData(BuildContext context,
-      {required String title,
+  Widget _buildCountingTextData(BuildContext context,
+      {required double count,
+      required String countExtension,
       required String subtitle,
-      Color? titleColor,
+      required Color titleColor,
       Color? subtitleColor}) {
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        Text(
-          title,
-          textAlign: TextAlign.center,
+        DefaultTextStyle(
           style: AppTextStyles.titleTextStyle(context,
               fontSize: 30, color: titleColor),
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Countup(
+                begin: 0,
+                end: count,
+                duration: Duration(seconds: 2),
+                curve: Curves.decelerate,
+                separator: ',',
+                style: TextStyle(
+                  fontSize: 36,
+                ),
+              ),
+              Text(
+                countExtension,
+                textAlign: TextAlign.center,
+              ),
+            ],
+          ),
         ),
         Text(
           subtitle,

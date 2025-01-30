@@ -1,6 +1,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:gap/gap.dart';
 import 'package:hirelyticsinc/core/config/theme/app_colors.dart';
+import 'package:hirelyticsinc/core/utils/constants/dimens.dart';
 import 'package:hirelyticsinc/core/utils/style/text_styles.dart';
 
 import '../../../../../core/utils/constants/assets.dart';
@@ -15,6 +16,7 @@ class MobileFooterSection extends StatelessWidget {
     final textColor = AppColors.colorWhite;
     return Container(
       decoration: BoxDecoration(color: background),
+      padding: EdgeInsets.symmetric(horizontal: Dimens.horizontalSpace),
       child: DefaultTextStyle(
         style: TextStyle(color: textColor),
         child: Column(

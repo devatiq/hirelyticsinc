@@ -1,6 +1,6 @@
 # hirelyticsinc
 
-A new Flutter project.
+Mobile apps development for hirelyticsinc.com
 
 ## Getting Started
 
