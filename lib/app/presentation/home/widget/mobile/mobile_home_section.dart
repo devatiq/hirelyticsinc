@@ -91,28 +91,15 @@ class MobileHomeSection extends StatelessWidget {
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        DefaultTextStyle(
+        Countup(
+          begin: 0,
+          end: count,
+          duration: Duration(seconds: 2),
+          curve: Curves.decelerate,
+          separator: ',',
           style: AppTextStyles.titleTextStyle(context,
               fontSize: 30, color: titleColor),
-          child: Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Countup(
-                begin: 0,
-                end: count,
-                duration: Duration(seconds: 2),
-                curve: Curves.decelerate,
-                separator: ',',
-                style: TextStyle(
-                  fontSize: 36,
-                ),
-              ),
-              Text(
-                countExtension,
-                textAlign: TextAlign.center,
-              ),
-            ],
-          ),
+          suffix: countExtension,
         ),
         Text(
           subtitle,

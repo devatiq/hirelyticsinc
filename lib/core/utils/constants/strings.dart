@@ -3,6 +3,7 @@ import 'package:hirelyticsinc/app/presentation/choose_us/title_description_model
 import 'package:hirelyticsinc/app/presentation/choose_us/why_choose_us_card_data_model.dart';
 import 'package:hirelyticsinc/app/presentation/service/service_card_info_model.dart';
 
+import '../../../app/presentation/footer/social_button_data_model.dart';
 import 'assets.dart';
 
 const String empoweringInnovationText =
@@ -85,18 +86,40 @@ const List<ServiceCardInfoModel> serviceCardInfoList = [
       image: ''),
 ];
 
-const String readyToSolveYourChallenges = 'Ready to solve your challenges? Let us create a roadmap for success, personalized for your business.';
-
+const String readyToSolveYourChallenges =
+    'Ready to solve your challenges? Let us create a roadmap for success, personalized for your business.';
 
 // about us section
 const String aboutUsText = 'About Us';
-const String atHirelyticsWeAreDedicatedTo = 'At Hirelytics, we are dedicated to helping businesses unlock their potential through innovative tech solutions and expert guidance. Our team of professionals brings a wealth of experience in technology, strategy, and innovation, ensuring tailored solutions that drive success. Whether it’s finding the right talent, scaling operations, or staying ahead of industry trends, we are here to turn your challenges into opportunities. With a commitment to excellence and a passion for innovation, Hirelytics is your trusted partner for all things tech.';
+const String atHirelyticsWeAreDedicatedTo =
+    'At Hirelytics, we are dedicated to helping businesses unlock their potential through innovative tech solutions and expert guidance. Our team of professionals brings a wealth of experience in technology, strategy, and innovation, ensuring tailored solutions that drive success. Whether it’s finding the right talent, scaling operations, or staying ahead of industry trends, we are here to turn your challenges into opportunities. With a commitment to excellence and a passion for innovation, Hirelytics is your trusted partner for all things tech.';
 const String meetTheTeam = 'Meet The Team';
-
-
 
 // footer section
 const String connectText = 'Connect';
+const List<SocialButtonDataModel> socialButtonDataList = [
+  SocialButtonDataModel(
+      title: 'Facebook',
+      iconPath: Assets.socialFacebookSvg,
+      url: 'https://www.facebook.com/'),
+  SocialButtonDataModel(
+      title: 'Instagram',
+      iconPath: Assets.socialInstagramSvg,
+      url: 'https://www.instagram.com/'),
+  SocialButtonDataModel(
+      title: 'Twitter/X',
+      iconPath: Assets.socialTwitterOrXSvg,
+      url: 'https://twitter.com/'),
+  SocialButtonDataModel(
+      title: 'Linkedin',
+      iconPath: Assets.socialLinkedinSvg,
+      url: 'https://www.linkedin.com/'),
+];
 
-
-
+const String organizationContactAddress =
+    '6 Liberty Square #6055 Boston, MA 02109';
+const String organizationContactPhone1 = '(617) 469-9779';
+const String organizationContactPhone2 = '(617) 363-0091';
+const String organizationContactEmail = 'contact@hirelyticsinc.com';
+const String copyrightText =
+    'Copyright 2025. All Rights Reserved.';

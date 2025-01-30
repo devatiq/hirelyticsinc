@@ -9,7 +9,9 @@ import '../../footer/widget/mobile/mobile_footer_section.dart';
 import '../../service/widget/mobile/mobile_service_section.dart';
 
 class MobileLayout extends StatelessWidget {
-  const MobileLayout({super.key});
+  final ItemScrollController itemScrollController;
+
+  const MobileLayout({super.key, required this.itemScrollController});
 
   final List<Widget> items = const [
     MobileHomeSection(),
@@ -24,6 +26,7 @@ class MobileLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScrollablePositionedList.builder(
       itemCount: items.length,
+      itemScrollController: itemScrollController,
       itemBuilder: (context, index) => items[index],
     );
   }
