@@ -17,5 +17,8 @@ abstract class Assets {
   static const socialLinkedinSvg = 'assets/icons/social_icon_linkedin.svg';
   static const socialTwitterOrXSvg = 'assets/icons/social_icon_x.svg';
 
+
+  static const teamsDataJson = 'assets/team/teams_data.json';
+
   const Assets._();
 }

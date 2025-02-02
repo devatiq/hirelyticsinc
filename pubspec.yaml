@@ -96,6 +96,7 @@ flutter:
     - assets/
     - assets/images/
     - assets/icons/
+    - assets/team/
     - assets/temp/
 
   # fonts:

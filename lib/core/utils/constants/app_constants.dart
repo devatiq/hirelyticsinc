@@ -10,4 +10,5 @@ abstract class AppConstants {
   static const String subdirectoryUser = 'user';
   static const String subdirectoryCategories = 'categories';
   static const String subdirectoryItems = 'items';
+
 }

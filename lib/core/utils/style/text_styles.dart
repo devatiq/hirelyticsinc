@@ -1,24 +1,27 @@
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
+import '../../config/theme/app_colors.dart';
 
 abstract class AppTextStyles {
   const AppTextStyles._();
 
   static TextStyle titleTextStyle(BuildContext context,
-          {required double fontSize, Color? color}) =>
+          {required double fontSize, FontWeight? fontWeight, Color? color}) =>
       TextStyle(
         fontSize: fontSize,
-        fontWeight: FontWeight.bold,
-        color: color,
+        fontWeight: fontWeight ?? FontWeight.bold,
+        color: color ?? AppColors.colorOnTitleText,
+        letterSpacing: -0.3,
         fontFamily: GoogleFonts.montserrat().fontFamily,
       );
 
   static TextStyle subtitleTextStyle(BuildContext context,
-          {required double fontSize, Color? color}) =>
+          {required double fontSize, FontWeight? fontWeight, Color? color}) =>
       TextStyle(
         fontSize: fontSize,
-        fontWeight: FontWeight.normal,
-        color: color,
+        fontWeight: fontWeight ?? FontWeight.normal,
+        letterSpacing: -0.3,
+        color: color ?? AppColors.colorOnBodyText,
         fontFamily: GoogleFonts.raleway().fontFamily,
       );
 }

@@ -3,6 +3,7 @@
  */
 
 import 'dart:async';
+import 'dart:convert';
 import 'dart:ui' as ui;
 
 import 'package:flutter/material.dart';
@@ -164,4 +165,13 @@ String generateRemoteImageUrl({required String endPoint}) {
     return '';
   }
   return '${AppConstants.appImageLoadBaseUrl}$endPoint';
+}
+
+Future<dynamic> loadJsonFromAssets(String filePath) async {
+  String jsonString = await rootBundle.loadString(filePath);
+  final json = jsonDecode(jsonString);
+  if(json is List<dynamic>){
+    return json;
+  }
+  return jsonEncode(json);
 }

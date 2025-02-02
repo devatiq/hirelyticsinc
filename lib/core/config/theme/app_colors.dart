@@ -25,9 +25,10 @@ abstract class AppColors {
 
   static const colorFooterBackground = Color(0xFF292829);
 
-  static const colorOnBodyText = Color(0xFF222222);
-  static const colorOnTitleText = Color(0xFF777777);
-  static const colorOnLabelText = Color(0xFF696969);
+  static const colorOnTitleText = Color(0xFF292829);
+  static const colorOnBodyText = Color(0xFF333333);
+  static const colorTextFieldBackground = Color(0xFFF3F3F3);
+
 
   static const colorError = Color(0xffcb0101);
   static const colorBlack2 = Color(0xff021526);

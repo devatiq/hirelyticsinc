@@ -2,6 +2,7 @@ import 'package:countup/countup.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:gap/gap.dart';
+import 'package:hirelyticsinc/app/shared/widget/mobile/learn_more_button.dart';
 import 'package:hirelyticsinc/core/config/theme/app_colors.dart';
 import 'package:hirelyticsinc/core/utils/constants/dimens.dart';
 import 'package:hirelyticsinc/core/utils/extension/context_extension.dart';
@@ -20,11 +21,11 @@ class MobileHomeSection extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Gap(60),
+          Gap(40),
           Text(
             empoweringInnovationText,
             style: AppTextStyles.titleTextStyle(context,
-                fontSize: Dimens.fontSize40),
+                fontSize: Dimens.fontSize35),
           ),
           const Gap(16),
           Text(
@@ -35,22 +36,7 @@ class MobileHomeSection extends StatelessWidget {
             ),
           ),
           const Gap(16),
-          InkWell(
-            onTap: () {},
-            child: Container(
-              padding: EdgeInsets.symmetric(
-                  horizontal: Dimens.padding24, vertical: Dimens.padding16),
-              decoration: BoxDecoration(
-                color: Theme.of(context).colorScheme.primary,
-                borderRadius: BorderRadius.circular(Dimens.borderRadius16),
-              ),
-              child: Text(
-                learnMoreText,
-                style: AppTextStyles.subtitleTextStyle(context,
-                    fontSize: 18, color: Colors.white),
-              ),
-            ),
-          ),
+          LearnMoreButton(),
           const Gap(24),
           _buildCountingTextData(
             context,
@@ -58,7 +44,6 @@ class MobileHomeSection extends StatelessWidget {
             countExtension: '%',
             subtitle:
                 'of companies don’t use data analytics to improve their hiring process',
-            titleColor: AppColors.colorBlack,
           ),
           Gap(8),
           _buildCountingTextData(context,
@@ -74,7 +59,6 @@ class MobileHomeSection extends StatelessWidget {
             countExtension: 'x',
             subtitle:
                 'more accurate candidate selection powered by predictive analytics',
-            titleColor: AppColors.colorBlack,
           ),
           Gap(32),
         ],
@@ -86,28 +70,32 @@ class MobileHomeSection extends StatelessWidget {
       {required double count,
       required String countExtension,
       required String subtitle,
-      required Color titleColor,
+      Color? titleColor,
       Color? subtitleColor}) {
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        Countup(
-          begin: 0,
-          end: count,
-          duration: Duration(seconds: 2),
-          curve: Curves.decelerate,
-          separator: ',',
-          style: AppTextStyles.titleTextStyle(context,
-              fontSize: 30, color: titleColor),
-          suffix: countExtension,
-        ),
-        Text(
-          subtitle,
-          textAlign: TextAlign.center,
-          style: AppTextStyles.subtitleTextStyle(context,
-              fontSize: 12, color: subtitleColor),
-        ),
-      ],
+    return SizedBox(
+      width: double.infinity,
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Countup(
+            begin: 0,
+            end: count,
+            duration: Duration(seconds: 2),
+            curve: Curves.decelerate,
+            textAlign: TextAlign.center,
+            separator: ',',
+            style: AppTextStyles.titleTextStyle(context,
+                fontSize: 30, color: titleColor),
+            suffix: countExtension,
+          ),
+          Text(
+            subtitle,
+            textAlign: TextAlign.center,
+            style: AppTextStyles.subtitleTextStyle(context,
+                fontSize: 10, color: subtitleColor),
+          ),
+        ],
+      ),
     );
   }
 }

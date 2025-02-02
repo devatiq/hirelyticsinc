@@ -32,21 +32,21 @@ class MobileAppDrawer extends ConsumerWidget {
               title: Text('About'),
               onTap: () {
                 Scaffold.of(context).closeEndDrawer();
-                provider.scrollToIndex(2);
+                provider.scrollToIndex(3);
               },
             ),
             ListTile(
               title: Text('Service'),
               onTap: () {
                 Scaffold.of(context).closeEndDrawer();
-                provider.scrollToIndex(1);
+                provider.scrollToIndex(2);
               },
             ),
             ListTile(
               title: Text('Contact'),
               onTap: () {
                 Scaffold.of(context).closeEndDrawer();
-                provider.scrollToIndex(3);
+                provider.scrollToIndex(4);
               },
             ),
           ],

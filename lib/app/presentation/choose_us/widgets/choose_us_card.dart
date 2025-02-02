@@ -27,7 +27,7 @@ class ChooseUsCard extends StatelessWidget {
       padding: EdgeInsets.all(Dimens.padding24),
       decoration: BoxDecoration(
         color: Colors.white,
-        boxShadow: CommonStyle.boxShadow(blurRadius: 10, colorOpacity: 0.05),
+        boxShadow: CommonStyle.boxShadow(blurRadius: 10, colorOpacity: 0.1),
         borderRadius: BorderRadius.circular(Dimens.borderRadius24),
       ),
       child: Column(

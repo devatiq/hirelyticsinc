@@ -34,16 +34,19 @@ class MobileServiceCardWidget extends StatelessWidget {
               child: ClipRRect(
                   borderRadius: BorderRadius.circular(Dimens.borderRadius8),
                   child: ColoredBox(
-                      color: Colors.red, child: Image.asset(Assets.logoBlack)))),
-          Gap(16),
+                      color: Colors.red,
+                      child: Image.asset(Assets.logoBlack)))),
+          Gap(24),
           Text(
             title,
-            style: AppTextStyles.titleTextStyle(context, fontSize: 20),
+            style: AppTextStyles.titleTextStyle(context,
+                fontSize: Dimens.fontSize20),
           ),
           Gap(16),
           Text(
             description,
-            style: AppTextStyles.subtitleTextStyle(context, fontSize: 16),
+            style: AppTextStyles.subtitleTextStyle(context,
+                fontSize: Dimens.fontSize16),
           ),
         ],
       ),

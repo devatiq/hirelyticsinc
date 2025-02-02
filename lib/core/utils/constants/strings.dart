@@ -87,13 +87,25 @@ const List<ServiceCardInfoModel> serviceCardInfoList = [
 ];
 
 const String readyToSolveYourChallenges =
-    'Ready to solve your challenges? Let us create a roadmap for success, personalized for your business.';
+    'Ready to solve your challenges?\nLet us create a roadmap for success, personalized for your business.';
 
 // about us section
 const String aboutUsText = 'About Us';
 const String atHirelyticsWeAreDedicatedTo =
     'At Hirelytics, we are dedicated to helping businesses unlock their potential through innovative tech solutions and expert guidance. Our team of professionals brings a wealth of experience in technology, strategy, and innovation, ensuring tailored solutions that drive success. Whether it’s finding the right talent, scaling operations, or staying ahead of industry trends, we are here to turn your challenges into opportunities. With a commitment to excellence and a passion for innovation, Hirelytics is your trusted partner for all things tech.';
 const String meetTheTeam = 'Meet The Team';
+
+
+// contact us section
+const String contactUsText = 'Contact Us';
+const String emailText = 'Email';
+const String phoneText = 'Phone';
+const String locationText = 'Location';
+const String sendUsAMessage = 'Send Us A Message';
+const String firstNameText = 'First Name';
+const String lastNameText = 'Last Name';
+const String messageText = 'Message';
+const String submitFormButtonText = 'Submit Form';
 
 // footer section
 const String connectText = 'Connect';
@@ -118,8 +130,8 @@ const List<SocialButtonDataModel> socialButtonDataList = [
 
 const String organizationContactAddress =
     '6 Liberty Square #6055 Boston, MA 02109';
+const String organizationLocationMapUrl = 'https://maps.app.goo.gl/kvFq6pBTBuNVXrAH6';
 const String organizationContactPhone1 = '(617) 469-9779';
 const String organizationContactPhone2 = '(617) 363-0091';
 const String organizationContactEmail = 'contact@hirelyticsinc.com';
-const String copyrightText =
-    'Copyright 2025. All Rights Reserved.';
+const String copyrightText = 'Copyright 2025. All Rights Reserved.';
