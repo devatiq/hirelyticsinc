@@ -71,19 +71,19 @@ const List<ServiceCardInfoModel> serviceCardInfoList = [
           title: 'Access to a Skilled Talent Pool',
           description:
               'Say goodbye to lengthy hiring processes. Our vast network of pre-vetted tech professionals ensures you find the perfect talent quickly and efficiently.'),
-      image: ''),
+      image: Assets.serviceImage1),
   ServiceCardInfoModel(
       titleDescription: TitleDescriptionModel(
           title: 'Customized Scalability Strategies',
           description:
               'Whether you’re scaling up or streamlining operations, we design flexible, tech-driven strategies that optimize performance while keeping costs in check.'),
-      image: ''),
+      image: Assets.serviceImage2),
   ServiceCardInfoModel(
       titleDescription: TitleDescriptionModel(
           title: 'Future-Proof Tech Insights',
           description:
               'Stay ahead in the competitive tech landscape with our expert guidance on emerging technologies, trends, and tools tailored to your industry needs.'),
-      image: ''),
+      image: Assets.serviceImage3),
 ];
 
 const String readyToSolveYourChallenges =
@@ -94,7 +94,7 @@ const String aboutUsText = 'About Us';
 const String atHirelyticsWeAreDedicatedTo =
     'At Hirelytics, we are dedicated to helping businesses unlock their potential through innovative tech solutions and expert guidance. Our team of professionals brings a wealth of experience in technology, strategy, and innovation, ensuring tailored solutions that drive success. Whether it’s finding the right talent, scaling operations, or staying ahead of industry trends, we are here to turn your challenges into opportunities. With a commitment to excellence and a passion for innovation, Hirelytics is your trusted partner for all things tech.';
 const String meetTheTeam = 'Meet The Team';
-
+const String viewBioText = 'View Bio';
 
 // contact us section
 const String contactUsText = 'Contact Us';
@@ -130,7 +130,8 @@ const List<SocialButtonDataModel> socialButtonDataList = [
 
 const String organizationContactAddress =
     '6 Liberty Square #6055 Boston, MA 02109';
-const String organizationLocationMapUrl = 'https://maps.app.goo.gl/kvFq6pBTBuNVXrAH6';
+const String organizationLocationMapUrl =
+    'https://maps.app.goo.gl/kvFq6pBTBuNVXrAH6';
 const String organizationContactPhone1 = '(617) 469-9779';
 const String organizationContactPhone2 = '(617) 363-0091';
 const String organizationContactEmail = 'contact@hirelyticsinc.com';

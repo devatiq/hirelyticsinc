@@ -7,6 +7,7 @@ import 'package:hirelyticsinc/core/utils/style/text_styles.dart';
 
 import '../../../../../core/utils/constants/assets.dart';
 import '../../../../../core/utils/constants/dimens.dart';
+import '../../../../shared/widget/mobile/stack_image_view_widget.dart';
 
 class MobileWhyChooseUsSection extends StatelessWidget {
   const MobileWhyChooseUsSection({super.key});
@@ -33,7 +34,12 @@ class MobileWhyChooseUsSection extends StatelessWidget {
           const Gap(16),
           ..._buildCard(context),
           const Gap(16),
-          Placeholder(),
+          StackImageViewWidget(
+            bigImage: Assets.chooseUsImage1,
+            smallImage: Assets.chooseUsImage2,
+            smallImageAlignmentRight: 0,
+            smallImageAlignmentBottom: 10,
+          ),
           Gap(16),
           Text(
             whyHirelyticsText,
@@ -47,7 +53,6 @@ class MobileWhyChooseUsSection extends StatelessWidget {
           Gap(16),
           ..._buildChooseList(context),
           Gap(32),
-
         ],
       ),
     );
@@ -57,24 +62,24 @@ class MobileWhyChooseUsSection extends StatelessWidget {
     final list = whyChooseUsCardInfoList;
     return List.generate(
       whyChooseUsCardInfoList.length,
-          (index) =>
-          Padding(
-            padding: const EdgeInsets.only(bottom: 16),
-            child: ChooseUsCard(
-                icon: list[index].icon,
-                title: list[index].titleDescription.title,
-                description: list[index].titleDescription.description),
-          ),
+      (index) => Padding(
+        padding: const EdgeInsets.only(bottom: 16),
+        child: ChooseUsCard(
+            icon: list[index].icon,
+            title: list[index].titleDescription.title,
+            description: list[index].titleDescription.description),
+      ),
     );
   }
 
   List<Widget> _buildChooseList(BuildContext context) {
     final list = whyChooseUseReasonList;
-    return List.generate(list.length, (index) =>
-        Padding(
-          padding: const EdgeInsets.only(bottom: 16),
-          child: TitleSubtitleTextViewWidget(
-              title: list[index].title, subtitle: list[index].description),
-        ));
+    return List.generate(
+        list.length,
+        (index) => Padding(
+              padding: const EdgeInsets.only(bottom: 16),
+              child: TitleSubtitleTextViewWidget(
+                  title: list[index].title, subtitle: list[index].description),
+            ));
   }
 }

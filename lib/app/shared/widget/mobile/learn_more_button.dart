@@ -1,19 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:hirelyticsinc/app/presentation/dashboard/menu.dart';
+import 'package:hirelyticsinc/app/presentation/dashboard/provider/dashboard_provider.dart';
 
 import '../../../../core/utils/constants/dimens.dart';
 import '../../../../core/utils/constants/strings.dart';
 import '../../../../core/utils/style/text_styles.dart';
 
-class LearnMoreButton extends StatelessWidget {
+class LearnMoreButton extends ConsumerWidget {
   const LearnMoreButton({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final provider = ref.read(dashboardProvider);
+
     final backgroundColor = Theme.of(context).colorScheme.primary;
     final onBackgroundColor = Theme.of(context).colorScheme.onPrimary;
     return InkWell(
-      onTap: () {},
+      onTap: () {
+        provider.scrollToIndex(Menu.contact.indexValue);
+      },
       child: Container(
         padding: EdgeInsets.symmetric(
             horizontal: Dimens.padding24, vertical: Dimens.padding12),

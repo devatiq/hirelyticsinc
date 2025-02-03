@@ -36,6 +36,7 @@ abstract class Dimens {
   static const double padding16 = 16.0;
   static const double padding20 = 20.0;
   static const double padding24 = 24.0;
+  static const double padding28 = 28.0;
   static const double padding32 = 32.0;
   static const double padding40 = 40.0;
   static const double padding48 = 48.0;
@@ -45,7 +46,12 @@ abstract class Dimens {
   static const double iconSize20 = 20.0;
   static const double iconSize24 = 24.0;
   static const double iconSize32 = 32.0;
+  static const double iconSize36 = 36.0;
   static const double iconSize40 = 40.0;
+
+
+  static const double itemSize10 = 10.0;
+  static const double itemSize60 = 60.0;
 
   const Dimens._();
 }

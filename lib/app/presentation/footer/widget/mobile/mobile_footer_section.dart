@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hirelyticsinc/core/config/theme/app_colors.dart';
@@ -9,6 +10,7 @@ import 'package:hirelyticsinc/core/utils/style/text_styles.dart';
 
 import '../../../../../core/utils/constants/assets.dart';
 import '../../../../../core/utils/constants/strings.dart';
+import '../../../../../core/utils/helper/url_launcher_helper.dart';
 import '../footer_social_icons_widget.dart';
 
 class MobileFooterSection extends StatelessWidget {
@@ -41,20 +43,33 @@ class MobileFooterSection extends StatelessWidget {
             _buildSocialIcons(context),
             Gap(16),
             _buildAddress(context,
-                icon: Icons.location_on, data: organizationContactAddress),
+                icon: Assets.locationPinSvg,
+                data: organizationContactAddress,
+                onTap: () => UrlLauncherHelper.launchURL(
+                    data: organizationLocationMapUrl,
+                    type: UrlLaunchType.maps)),
             Gap(16),
             _buildAddress(context,
-                icon: Icons.phone, data: organizationContactPhone1),
+                icon: Assets.callDialSvg,
+                data: organizationContactPhone1,
+                onTap: () => UrlLauncherHelper.launchURL(
+                    data: organizationContactPhone1,
+                    type: UrlLaunchType.phone)),
             Gap(16),
             _buildAddress(context,
-                icon: Icons.call, data: organizationContactPhone2),
+                icon: Assets.telephoneDialSvg,
+                data: organizationContactPhone2,
+                onTap: () => UrlLauncherHelper.launchURL(
+                    data: organizationContactPhone2,
+                    type: UrlLaunchType.phone)),
             Gap(16),
             _buildAddress(context,
-                icon: Icons.email, data: organizationContactEmail),
+                icon: Assets.emailSendSvg,
+                data: organizationContactEmail,
+                onTap: () => UrlLauncherHelper.launchURL(
+                    data: organizationContactEmail, type: UrlLaunchType.email)),
             Gap(16),
-            Divider(
-              color: Colors.white,
-            ),
+            Divider(color: Colors.grey),
             Gap(16),
             Center(
               child: Text(
@@ -69,7 +84,7 @@ class MobileFooterSection extends StatelessWidget {
     );
   }
 
-  _buildSocialIcons(BuildContext context) {
+  Widget _buildSocialIcons(BuildContext context) {
     final list = socialButtonDataList;
     return Row(
       spacing: 16,
@@ -82,14 +97,28 @@ class MobileFooterSection extends StatelessWidget {
     );
   }
 
-  _buildAddress(BuildContext context,
-      {required IconData icon, required String data}) {
-    return Row(
-      children: [
-        Icon(icon, color: context.colorScheme.primary),
-        Gap(20),
-        Text(data),
-      ],
+  Widget _buildAddress(BuildContext context,
+      {required String icon,
+      required String data,
+      required void Function() onTap}) {
+    return InkWell(
+      onTap: onTap,
+      child: Row(
+        children: [
+          SizedBox(
+            height: Dimens.iconSize20,
+            width: Dimens.iconSize20,
+            child: SvgPicture.asset(
+              icon,
+              fit: BoxFit.contain,
+              colorFilter: ColorFilter.mode(
+                  context.colorScheme.primary, BlendMode.srcIn),
+            ),
+          ),
+          Gap(20),
+          Flexible(child: Text(data)),
+        ],
+      ),
     );
   }
 }

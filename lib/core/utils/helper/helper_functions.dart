@@ -170,8 +170,6 @@ String generateRemoteImageUrl({required String endPoint}) {
 Future<dynamic> loadJsonFromAssets(String filePath) async {
   String jsonString = await rootBundle.loadString(filePath);
   final json = jsonDecode(jsonString);
-  if(json is List<dynamic>){
-    return json;
-  }
-  return jsonEncode(json);
+
+  return json;
 }

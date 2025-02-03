@@ -28,14 +28,15 @@ class MobileServiceCardWidget extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SizedBox(
-              width: double.infinity,
-              height: 200,
-              child: ClipRRect(
-                  borderRadius: BorderRadius.circular(Dimens.borderRadius8),
-                  child: ColoredBox(
-                      color: Colors.red,
-                      child: Image.asset(Assets.logoBlack)))),
+          AspectRatio(
+            aspectRatio: 1.5,
+            child: ClipRRect(
+                borderRadius: BorderRadius.circular(Dimens.borderRadius8),
+                child: Image.asset(
+                  image,
+                  fit: BoxFit.cover,
+                )),
+          ),
           Gap(24),
           Text(
             title,

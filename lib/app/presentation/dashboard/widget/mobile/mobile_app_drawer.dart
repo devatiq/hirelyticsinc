@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:gap/gap.dart';
-import 'package:go_router/go_router.dart';
+import 'package:hirelyticsinc/app/presentation/dashboard/menu.dart';
 import 'package:hirelyticsinc/core/utils/constants/dimens.dart';
 
 import '../../provider/dashboard_provider.dart';
@@ -22,31 +22,31 @@ class MobileAppDrawer extends ConsumerWidget {
           children: [
             const Gap(16),
             ListTile(
-              title: Text('Home'),
+              title: Text(Menu.home.title),
               onTap: () {
                 Scaffold.of(context).closeEndDrawer();
-                provider.scrollToIndex(0);
+                provider.scrollToIndex(Menu.home.indexValue);
               },
             ),
             ListTile(
-              title: Text('About'),
+              title: Text(Menu.about.title),
               onTap: () {
                 Scaffold.of(context).closeEndDrawer();
-                provider.scrollToIndex(3);
+                provider.scrollToIndex(Menu.about.indexValue);
               },
             ),
             ListTile(
-              title: Text('Service'),
+              title: Text(Menu.service.title),
               onTap: () {
                 Scaffold.of(context).closeEndDrawer();
-                provider.scrollToIndex(2);
+                provider.scrollToIndex(Menu.service.indexValue);
               },
             ),
             ListTile(
-              title: Text('Contact'),
+              title: Text(Menu.contact.title),
               onTap: () {
                 Scaffold.of(context).closeEndDrawer();
-                provider.scrollToIndex(4);
+                provider.scrollToIndex(Menu.contact.indexValue);
               },
             ),
           ],

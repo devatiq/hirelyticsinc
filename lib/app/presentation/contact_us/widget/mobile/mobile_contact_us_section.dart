@@ -19,8 +19,8 @@ class MobileContactUsSection extends StatelessWidget {
         children: [
           Gap(40),
           MobileContactInfoCardWidget(),
-          Gap(20),
-          MobileContactFormCardWidget(),
+          // Gap(20),
+          // MobileContactFormCardWidget(),
           Gap(40),
         ],
       ),

@@ -6,22 +6,28 @@ abstract class AppTextStyles {
   const AppTextStyles._();
 
   static TextStyle titleTextStyle(BuildContext context,
-          {required double fontSize, FontWeight? fontWeight, Color? color}) =>
+          {required double fontSize,
+          FontWeight? fontWeight,
+          Color? color,
+          String? fontFamily}) =>
       TextStyle(
         fontSize: fontSize,
         fontWeight: fontWeight ?? FontWeight.bold,
         color: color ?? AppColors.colorOnTitleText,
         letterSpacing: -0.3,
-        fontFamily: GoogleFonts.montserrat().fontFamily,
+        fontFamily: fontFamily ?? GoogleFonts.montserrat().fontFamily,
       );
 
   static TextStyle subtitleTextStyle(BuildContext context,
-          {required double fontSize, FontWeight? fontWeight, Color? color}) =>
+          {required double fontSize,
+          FontWeight? fontWeight,
+          Color? color,
+          String? fontFamily}) =>
       TextStyle(
         fontSize: fontSize,
         fontWeight: fontWeight ?? FontWeight.normal,
         letterSpacing: -0.3,
         color: color ?? AppColors.colorOnBodyText,
-        fontFamily: GoogleFonts.raleway().fontFamily,
+        fontFamily: fontFamily ?? GoogleFonts.raleway().fontFamily,
       );
 }

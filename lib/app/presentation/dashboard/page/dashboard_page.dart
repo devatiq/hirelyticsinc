@@ -23,8 +23,12 @@ class DashboardPage extends ConsumerWidget {
       appBar: _buildMobileAppBar(context),
       endDrawer: MobileAppDrawer(),
       body: AdaptiveLayoutWidget(
-        mobileLayout: (context) => MobileLayout(itemScrollController: provider.controller,),
-        tabletLayout: (context) => TabletLayout(itemScrollController: provider.controller,),
+        mobileLayout: (context) => MobileLayout(
+          itemScrollController: provider.controller,
+        ),
+        tabletLayout: (context) => TabletLayout(
+          itemScrollController: provider.controller,
+        ),
       ),
     );
   }

@@ -14,13 +14,12 @@ class MobileLayout extends StatelessWidget {
   const MobileLayout({super.key, required this.itemScrollController});
 
   final List<Widget> items = const [
-    MobileHomeSection(),
-    MobileWhyChooseUsSection(),
-    MobileServiceSection(),
-    MobileAboutUsSection(),
-    MobileContactUsSection(),
-    //others
-    MobileFooterSection(),
+    MobileHomeSection(), // 0 Menu.home
+    MobileWhyChooseUsSection(), // 1
+    MobileServiceSection(), // 2 Menu.service
+    MobileAboutUsSection(), // 3 Menu.about
+    MobileContactUsSection(), // 4 Menu.contact
+    MobileFooterSection(), // 5
   ];
 
   @override

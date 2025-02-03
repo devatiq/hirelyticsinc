@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hirelyticsinc/app/presentation/team/provider/team_provider.dart';
@@ -12,17 +13,20 @@ class MobileTeamSection extends ConsumerWidget {
     final provider = ref.watch(teamProvider);
     return Container(
       decoration: BoxDecoration(),
-      child: GridView.builder(
-          itemCount: provider.teamList.length,
-          shrinkWrap: true,
-          physics: const NeverScrollableScrollPhysics(),
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 1,
-              mainAxisSpacing: Dimens.padding16,
-              childAspectRatio: 3 / 4),
-          itemBuilder: (_, index) => MobileTeamListSingleItem(
-                item: provider.teamList[index],
-              )),
+      child: provider.when(
+        error: (error, stackTrace) => Text(error.toString()),
+        loading: () => const Center(child: CircularProgressIndicator()),
+        data: (data) => GridView.builder(
+            itemCount: data.length,
+            shrinkWrap: true,
+            physics: const NeverScrollableScrollPhysics(),
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 1,
+                mainAxisSpacing: Dimens.padding16,
+                childAspectRatio:  0.66),
+            itemBuilder: (_, index) =>
+                MobileTeamListSingleItem(item: data[index])),
+      ),
     );
   }
 }
