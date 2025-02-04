@@ -4,5 +4,5 @@ abstract class Routes {
   static const String dashboard = 'dashboard';
   static const String home = 'home';
 
-  static const String member = 'member';
+  static const String memberDetails = 'member-details';
 }

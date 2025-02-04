@@ -1,7 +1,8 @@
 abstract class Assets {
   ///logo (assets/images/logo_black.png)
-  static const logoBlack = 'assets/images/logo_black.png';
-  static const logoWhite = 'assets/images/logo_white.png';
+  static const logoBlackSvg = 'assets/logo/logo_black.svg';
+  static const logoWhiteSvg = 'assets/logo/logo_white.svg';
+
 
   //icons
   ///menu icons (assets/icons/menu.png)
@@ -21,6 +22,9 @@ abstract class Assets {
   static const socialLinkedinSvg = 'assets/icons/social_icon_linkedin.svg';
   static const socialTwitterOrXSvg = 'assets/icons/social_icon_x.svg';
   static const socialWeb = 'assets/icons/social_icon_web.svg';
+
+  //home images
+  static const homeImageBackgroundWebp = 'assets/images/home_background_image.webp';
 
   //service images
   static const serviceImage1 = 'assets/images/service_image_1.jpg';

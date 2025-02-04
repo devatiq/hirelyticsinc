@@ -30,14 +30,12 @@ class MobileFooterSection extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Gap(40),
-            Image.asset(
-              Assets.logoWhite,
-              height: 40,
-            ),
+            SvgPicture.asset(Assets.logoWhiteSvg, height: Dimens.iconSize40),
             Gap(16),
             Text(
               connectText,
-              style: AppTextStyles.titleTextStyle(context, fontSize: 20),
+              style: AppTextStyles.titleTextStyle(context,
+                  fontSize: 20, color: textColor),
             ),
             Gap(16),
             _buildSocialIcons(context),
@@ -47,7 +45,7 @@ class MobileFooterSection extends StatelessWidget {
                 data: organizationContactAddress,
                 onTap: () => UrlLauncherHelper.launchURL(
                     data: organizationLocationMapUrl,
-                    type: UrlLaunchType.maps)),
+                    type: UrlLaunchType.url)),
             Gap(16),
             _buildAddress(context,
                 icon: Assets.callDialSvg,
@@ -72,12 +70,27 @@ class MobileFooterSection extends StatelessWidget {
             Divider(color: Colors.grey),
             Gap(16),
             Center(
-              child: Text(
-                textAlign: TextAlign.center,
-                copyrightText,
-              ),
+              child: Text.rich(
+                  textAlign: TextAlign.center,
+                  TextSpan(children: [
+                    TextSpan(text: copyrightText),
+                    TextSpan(text: ' | '),
+                    TextSpan(text: developedByText),
+                    TextSpan(text: ' '),
+                    WidgetSpan(
+                        child: InkWell(
+                            onTap: () => UrlLauncherHelper.launchURL(
+                                data: supreoXWebsiteUrlText,
+                                type: UrlLaunchType.url),
+                            child: Text(
+                              supreoXText,
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Theme.of(context).primaryColor),
+                            ))),
+                  ])),
             ),
-            Gap(16),
+            Gap(40),
           ],
         ),
       ),

@@ -111,21 +111,13 @@ const String submitFormButtonText = 'Submit Form';
 const String connectText = 'Connect';
 const List<SocialButtonDataModel> socialButtonDataList = [
   SocialButtonDataModel(
-      title: 'Facebook',
-      iconPath: Assets.socialFacebookSvg,
-      url: 'https://www.facebook.com/'),
+      title: 'Facebook', iconPath: Assets.socialFacebookSvg, url: 'https://www.facebook.com/hirelyticsinc/'),
   SocialButtonDataModel(
-      title: 'Instagram',
-      iconPath: Assets.socialInstagramSvg,
-      url: 'https://www.instagram.com/'),
+      title: 'Instagram', iconPath: Assets.socialInstagramSvg, url: 'https://www.instagram.com/hirelyticsinc/'),
   SocialButtonDataModel(
-      title: 'Twitter/X',
-      iconPath: Assets.socialTwitterOrXSvg,
-      url: 'https://twitter.com/'),
+      title: 'Twitter/X', iconPath: Assets.socialTwitterOrXSvg, url: 'https://x.com/hirelyticsinc'),
   SocialButtonDataModel(
-      title: 'Linkedin',
-      iconPath: Assets.socialLinkedinSvg,
-      url: 'https://www.linkedin.com/'),
+      title: 'Linkedin', iconPath: Assets.socialLinkedinSvg, url: 'https://www.linkedin.com/company/hirelyticstech/'),
 ];
 
 const String organizationContactAddress =
@@ -135,4 +127,7 @@ const String organizationLocationMapUrl =
 const String organizationContactPhone1 = '(617) 469-9779';
 const String organizationContactPhone2 = '(617) 363-0091';
 const String organizationContactEmail = 'contact@hirelyticsinc.com';
-const String copyrightText = 'Copyright 2025. All Rights Reserved.';
+const String copyrightText = '© Hirelytics 2025';
+const String developedByText = 'Developed By';
+const String supreoXText = 'SupreoX';
+const String supreoXWebsiteUrlText = 'https://supreox.com';

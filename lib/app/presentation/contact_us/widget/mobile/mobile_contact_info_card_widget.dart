@@ -24,7 +24,7 @@ class MobileContactInfoCardWidget extends StatelessWidget {
           Text(contactUsText,
               style: AppTextStyles.titleTextStyle(context,
                   fontSize: Dimens.fontSize25, color: AppColors.colorWhite)),
-          Gap(Dimens.padding40),
+          Gap(Dimens.padding32),
           _buildContactInfo(context,
               title: emailText,
               data: organizationContactEmail,
@@ -69,7 +69,7 @@ class MobileContactInfoCardWidget extends StatelessWidget {
           ),
           child: Icon(
             icon,
-            size: 32,
+            size: Dimens.iconSize28,
             color: AppColors.colorBlack,
           ),
         ),

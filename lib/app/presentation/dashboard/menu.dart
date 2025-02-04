@@ -1,7 +1,7 @@
 enum Menu {
   home(0, 'Home'),
-  about(2, 'About'),
-  service(1, 'Service'),
+  about(3, 'About'),
+  service(2, 'Service'),
   contact(4, 'Contact');
 
   final String title;

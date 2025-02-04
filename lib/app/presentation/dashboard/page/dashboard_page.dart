@@ -38,7 +38,7 @@ class DashboardPage extends ConsumerWidget {
       toolbarHeight: Dimens.appBarHeight,
       backgroundColor: AppColors.kColorGradiant1,
       surfaceTintColor: Theme.of(context).colorScheme.secondary,
-      title: Image.asset(Assets.logoBlack),
+      title: SvgPicture.asset(Assets.logoBlackSvg, height: Dimens.iconSize40),
       actions: [
         Builder(
           builder: (context) {

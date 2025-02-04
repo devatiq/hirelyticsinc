@@ -95,6 +95,7 @@ flutter:
   assets:
     - assets/
     - assets/images/
+    - assets/logo/
     - assets/icons/
     - assets/team/
     - assets/temp/

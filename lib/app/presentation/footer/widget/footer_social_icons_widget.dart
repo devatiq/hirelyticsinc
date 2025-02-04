@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hirelyticsinc/core/utils/constants/assets.dart';
+import 'package:hirelyticsinc/core/utils/helper/url_launcher_helper.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../../../core/config/theme/app_colors.dart';
@@ -24,10 +25,8 @@ class FooterSocialIconsWidget extends StatelessWidget {
       message: toolTip,
       child: InkWell(
         onTap: () async {
-          final uri = Uri.parse(url);
-          if (await canLaunchUrl(uri)) {
-            launchUrl(uri);
-          }
+          if (url.trim().isEmpty) return;
+          UrlLauncherHelper.launchURL(data: url, type: UrlLaunchType.url);
         },
         child: Container(
           height: 50,

@@ -2,7 +2,7 @@ abstract class AppConstants {
   static const String appBaseUrl = 'https://hirelyticsinc.com/';
   static const String appImageLoadBaseUrl = 'https://hirelyticsinc.com/';
 
-  static const String appName = 'Hirelytics Inc';
+  static const String appName = 'Hirelytics';
   static const String appVersion = '1.0.0';
 
   static const String rootDirectoryDatabase = 'database';

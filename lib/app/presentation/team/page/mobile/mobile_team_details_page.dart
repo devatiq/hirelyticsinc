@@ -3,11 +3,9 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:hirelyticsinc/app/presentation/dashboard/widget/mobile/mobile_app_drawer.dart';
 import 'package:hirelyticsinc/app/presentation/footer/widget/mobile/mobile_footer_section.dart';
 import 'package:hirelyticsinc/app/presentation/team/team_view_model.dart';
 import 'package:hirelyticsinc/app/shared/widget/grey_scale_with_background_widget.dart';
-import 'package:hirelyticsinc/core/utils/constants/app_constants.dart';
 import 'package:hirelyticsinc/core/utils/constants/dimens.dart';
 
 import '../../../../../core/config/theme/app_colors.dart';
@@ -22,7 +20,9 @@ class MobileTeamDetailsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Team Details'),),
+      appBar: AppBar(
+        title: Text(model.name),
+      ),
       body: SafeArea(
         child: Container(
           decoration: BoxDecoration(),
@@ -30,12 +30,12 @@ class MobileTeamDetailsPage extends StatelessWidget {
             child: Column(
               children: [
                 Padding(
-                  padding:
-                      EdgeInsets.symmetric(horizontal: Dimens.horizontalSpace),
+                  padding: EdgeInsets.symmetric(
+                      horizontal: Dimens.horizontalSpace,
+                      vertical: Dimens.verticalSpace),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Gap(Dimens.padding40),
                       ClipRRect(
                           borderRadius:
                               BorderRadius.circular(Dimens.borderRadius10),

@@ -15,6 +15,7 @@ abstract class Dimens {
   static const double fontSize20 = 20.0;
   static const double fontSize24 = 24.0;
   static const double fontSize25 = 25.0;
+  static const double fontSize30 = 30.0;
   static const double fontSize35 = 35.0;
   static const double fontSize40 = 40.0;
 
@@ -45,6 +46,7 @@ abstract class Dimens {
   static const double iconSize16 = 16.0;
   static const double iconSize20 = 20.0;
   static const double iconSize24 = 24.0;
+  static const double iconSize28 = 28.0;
   static const double iconSize32 = 32.0;
   static const double iconSize36 = 36.0;
   static const double iconSize40 = 40.0;

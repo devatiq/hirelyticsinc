@@ -8,6 +8,7 @@ import 'package:hirelyticsinc/core/utils/constants/dimens.dart';
 import 'package:hirelyticsinc/core/utils/extension/context_extension.dart';
 import 'package:hirelyticsinc/core/utils/style/text_styles.dart';
 
+import '../../../../../core/utils/constants/assets.dart';
 import '../../../../../core/utils/constants/strings.dart';
 
 class MobileHomeSection extends StatelessWidget {
@@ -16,7 +17,18 @@ class MobileHomeSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(gradient: AppColors.kGradiantHomePage),
+      decoration: BoxDecoration(
+        gradient: AppColors.kGradiantHomePage,
+        image: DecorationImage(
+            colorFilter: ColorFilter.matrix([
+              0.2126, 0.7152, 0.0722, 0, 0, //
+              0.2126, 0.7152, 0.0722, 0, 0, //
+              0.2126, 0.7152, 0.0722, 0, 0, //
+              0, 0, 0, 0.33, 0, //
+            ]),
+            image: AssetImage(Assets.homeImageBackgroundWebp),
+            fit: BoxFit.cover),
+      ),
       padding: EdgeInsets.symmetric(horizontal: Dimens.horizontalSpace),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -85,14 +97,14 @@ class MobileHomeSection extends StatelessWidget {
             textAlign: TextAlign.center,
             separator: ',',
             style: AppTextStyles.titleTextStyle(context,
-                fontSize: 30, color: titleColor),
+                fontSize: Dimens.fontSize30, color: titleColor),
             suffix: countExtension,
           ),
           Text(
             subtitle,
             textAlign: TextAlign.center,
             style: AppTextStyles.subtitleTextStyle(context,
-                fontSize: 10, color: subtitleColor),
+                fontSize: Dimens.fontSize12, color: subtitleColor),
           ),
         ],
       ),
