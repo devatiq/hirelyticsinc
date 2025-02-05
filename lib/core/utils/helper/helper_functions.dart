@@ -4,7 +4,6 @@
 
 import 'dart:async';
 import 'dart:convert';
-import 'dart:ui' as ui;
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -12,7 +11,6 @@ import 'package:hirelyticsinc/core/utils/extension/context_extension.dart';
 
 import '../../../core/utils/helper/datetime_helper.dart';
 import '../constants/app_constants.dart';
-import '../constants/dimens.dart';
 import '../enums/message_type.dart';
 
 void showAppSnackBar(

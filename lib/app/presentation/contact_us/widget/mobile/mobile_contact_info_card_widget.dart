@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:gap/gap.dart';
 import 'package:hirelyticsinc/core/config/theme/app_colors.dart';
 import 'package:hirelyticsinc/core/utils/constants/dimens.dart';

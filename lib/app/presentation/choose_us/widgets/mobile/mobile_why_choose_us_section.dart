@@ -51,7 +51,7 @@ class MobileWhyChooseUsSection extends StatelessWidget {
             style: AppTextStyles.subtitleTextStyle(context, fontSize: 16),
           ),
           Gap(16),
-          ..._buildChooseList(context),
+          _buildChooseList(context),
           Gap(32),
         ],
       ),
@@ -72,14 +72,17 @@ class MobileWhyChooseUsSection extends StatelessWidget {
     );
   }
 
-  List<Widget> _buildChooseList(BuildContext context) {
+  Widget _buildChooseList(BuildContext context) {
     final list = whyChooseUseReasonList;
-    return List.generate(
-        list.length,
-        (index) => Padding(
-              padding: const EdgeInsets.only(bottom: 16),
-              child: TitleSubtitleTextViewWidget(
-                  title: list[index].title, subtitle: list[index].description),
-            ));
+    return Align(
+      alignment: Alignment.centerLeft,
+      child: Column(
+        spacing: Dimens.padding16,
+        children: List.generate(
+            list.length,
+            (index) => TitleSubtitleTextViewWidget(
+                title: list[index].title, subtitle: list[index].description)),
+      ),
+    );
   }
 }

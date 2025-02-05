@@ -5,7 +5,7 @@ class TabletLayout extends StatelessWidget {
   final ItemScrollController itemScrollController;
   const TabletLayout({super.key, required this.itemScrollController});
 
-  final List<Widget> items = const [Text('sdfsdfsff')];
+  final List<Widget> items = const [Text('Tablet')];
 
   @override
   Widget build(BuildContext context) {

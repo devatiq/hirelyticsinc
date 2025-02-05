@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hirelyticsinc/app/presentation/dashboard/provider/dashboard_provider.dart';
@@ -26,7 +25,7 @@ class DashboardPage extends ConsumerWidget {
         mobileLayout: (context) => MobileLayout(
           itemScrollController: provider.controller,
         ),
-        tabletLayout: (context) => TabletLayout(
+        tabletLayout: (context) => MobileLayout(
           itemScrollController: provider.controller,
         ),
       ),

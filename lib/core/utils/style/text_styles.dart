@@ -1,5 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
+
 import '../../config/theme/app_colors.dart';
 
 abstract class AppTextStyles {

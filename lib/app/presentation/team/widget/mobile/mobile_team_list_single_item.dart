@@ -1,11 +1,7 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 import 'package:go_router/go_router.dart';
-import 'package:hirelyticsinc/app/presentation/team/page/mobile/mobile_team_details_page.dart';
 import 'package:hirelyticsinc/core/config/router/routes.dart';
 import 'package:hirelyticsinc/core/config/theme/app_colors.dart';
 import 'package:hirelyticsinc/core/utils/constants/dimens.dart';

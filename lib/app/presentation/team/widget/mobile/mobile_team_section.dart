@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hirelyticsinc/app/presentation/team/provider/team_provider.dart';
 import 'package:hirelyticsinc/app/presentation/team/widget/mobile/mobile_team_list_single_item.dart';

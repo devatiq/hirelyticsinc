@@ -2,8 +2,6 @@ import 'package:flutter/widgets.dart';
 import 'package:gap/gap.dart';
 import 'package:hirelyticsinc/core/utils/constants/dimens.dart';
 
-import '../../../../../core/utils/style/text_styles.dart';
-import 'mobile_contact_form_card_widget.dart';
 import 'mobile_contact_info_card_widget.dart';
 
 class MobileContactUsSection extends StatelessWidget {

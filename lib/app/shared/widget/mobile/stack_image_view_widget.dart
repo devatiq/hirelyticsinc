@@ -2,8 +2,6 @@ import 'package:flutter/widgets.dart';
 import 'package:hirelyticsinc/core/config/theme/app_colors.dart';
 import 'package:hirelyticsinc/core/utils/constants/dimens.dart';
 
-import '../../../../core/utils/constants/assets.dart';
-
 class StackImageViewWidget extends StatelessWidget {
   final String bigImage;
   final String smallImage;

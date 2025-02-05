@@ -1,11 +1,7 @@
 
 import 'package:flutter/services.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get_it/get_it.dart';
 import 'package:path_provider/path_provider.dart';
-
-
-import '../constants/assets.dart';
 
 final getIt = GetIt.instance;
 

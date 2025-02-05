@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:gap/gap.dart';
 import 'package:hirelyticsinc/core/config/theme/app_colors.dart';
-import 'package:hirelyticsinc/core/utils/constants/app_constants.dart';
 import 'package:hirelyticsinc/core/utils/constants/dimens.dart';
 import 'package:hirelyticsinc/core/utils/constants/strings.dart';
 import 'package:hirelyticsinc/core/utils/style/text_styles.dart';

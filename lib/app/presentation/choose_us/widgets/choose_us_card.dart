@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 import 'package:hirelyticsinc/core/utils/constants/dimens.dart';
 import 'package:hirelyticsinc/core/utils/helper/common_style.dart';
 
-import '../../../../core/utils/constants/assets.dart';
 import '../../../../core/utils/style/text_styles.dart';
 
 class ChooseUsCard extends StatelessWidget {

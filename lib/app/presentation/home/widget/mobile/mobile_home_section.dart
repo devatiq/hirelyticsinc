@@ -1,11 +1,9 @@
 import 'package:countup/countup.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:gap/gap.dart';
 import 'package:hirelyticsinc/app/shared/widget/mobile/learn_more_button.dart';
 import 'package:hirelyticsinc/core/config/theme/app_colors.dart';
 import 'package:hirelyticsinc/core/utils/constants/dimens.dart';
-import 'package:hirelyticsinc/core/utils/extension/context_extension.dart';
 import 'package:hirelyticsinc/core/utils/style/text_styles.dart';
 
 import '../../../../../core/utils/constants/assets.dart';
