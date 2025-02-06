@@ -18,11 +18,12 @@ class MobileTeamSection extends ConsumerWidget {
         data: (data) => GridView.builder(
             itemCount: data.length,
             shrinkWrap: true,
+            primary: false,
             physics: const NeverScrollableScrollPhysics(),
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 1,
                 mainAxisSpacing: Dimens.padding16,
-                childAspectRatio:  0.66),
+                childAspectRatio:  0.8),
             itemBuilder: (_, index) =>
                 MobileTeamListSingleItem(item: data[index])),
       ),

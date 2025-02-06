@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:gap/gap.dart';
-import 'package:hirelyticsinc/app/presentation/choose_us/widgets/choose_us_card.dart';
-import 'package:hirelyticsinc/app/presentation/choose_us/widgets/title_subtitle_text_view_widget.dart';
+import 'package:hirelyticsinc/app/presentation/choose_us/widget/choose_us_card.dart';
+import 'package:hirelyticsinc/app/presentation/choose_us/widget/title_subtitle_text_view_widget.dart';
 import 'package:hirelyticsinc/core/utils/constants/strings.dart';
 import 'package:hirelyticsinc/core/utils/style/text_styles.dart';
 

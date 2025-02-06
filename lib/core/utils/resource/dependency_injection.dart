@@ -1,7 +1,11 @@
-
 import 'package:flutter/services.dart';
 import 'package:get_it/get_it.dart';
+import 'package:hirelyticsinc/app/data/respository/repository_impl.dart';
+import 'package:hirelyticsinc/app/data/service/remote_service.dart';
 import 'package:path_provider/path_provider.dart';
+
+import '../../../app/domain/usecase/get_blogs_use_case.dart';
+import '../../network/base_api_service.dart';
 
 final getIt = GetIt.instance;
 
@@ -16,8 +20,6 @@ Future<void> setup() async {
 
   await _svgLoader();
 }
-
-
 
 Future<void> _svgLoader() async {
   // const loader = SvgAssetLoader(Assets.logo);
@@ -46,7 +48,6 @@ Future<void> _deviceOrientation() async {
 //   await Hive.openBox('${AppConstants.appName.toLowerCase()}_session');
 // }
 
-
 T _registerIfNot<T extends Object>(T t) {
   final isRegistered = getIt.isRegistered<T>(instance: t);
   if (!isRegistered) {
@@ -62,11 +63,9 @@ void _registerLazyIfNot<T extends Object>(T t) {
   }
 }
 
-
 void registeredRepositoryAndServices() {
-  /*
   //base local service - start
-  final baseLocalDatabase = _registerIfNot<AppDatabase>(AppDatabase());
+  ///final baseLocalDatabase = _registerIfNot<AppDatabase>(AppDatabase());
   //base local service - end
 
   //base api - start
@@ -75,33 +74,29 @@ void registeredRepositoryAndServices() {
 
   /// service
   //session service (hive) - start
-  final sessionService = _registerIfNot<T>(T());
+  ///final sessionService = _registerIfNot<T>(T());
 
   //session service (hive) - end
 
   //local database service (drift) - start
 
-  final localService =
-      _registerIfNot<T>(T(baseLocalDatabase));
+  ///final localService = _registerIfNot<T>(T(baseLocalDatabase));
 
   //local database service (drift) - end
 
   //api service (dio) - start
 
-  final authRemoteService =
-      _registerIfNot<T>(T(baseApiService));
-
+  final remoteService =
+      _registerIfNot<RemoteService>(RemoteService(baseApiService));
 
   //api service (dio) - end
 
   ///repositories
 
-  final repo = _registerIfNot<T>(T(
-    remoteService: service,
+  final repo = _registerIfNot<RepositoryImpl>(RepositoryImpl(
+    remoteService: remoteService,
   ));
 
   //register auth use case
-  _registerLazyIfNot<T>(T(repo));
-  _
-   */
+  _registerLazyIfNot<GetBlogsUseCase>(GetBlogsUseCase(repo));
 }

@@ -45,6 +45,7 @@ dependencies:
   # images management
   flutter_svg: ^2.0.17
   cached_network_image: ^3.4.1
+  flutter_html: ^3.0.0-beta.2
 
   # logging
   logger: ^2.5.0
@@ -60,6 +61,8 @@ dependencies:
 
   # scrollable_positioned_list
   scrollable_positioned_list: ^0.3.8
+
+
 
 
 

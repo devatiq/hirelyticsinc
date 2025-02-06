@@ -2,6 +2,7 @@ import 'package:flutter/widgets.dart';
 import 'package:gap/gap.dart';
 import 'package:hirelyticsinc/core/utils/constants/dimens.dart';
 
+import 'mobile_contact_form_card_widget.dart';
 import 'mobile_contact_info_card_widget.dart';
 
 class MobileContactUsSection extends StatelessWidget {
@@ -17,8 +18,8 @@ class MobileContactUsSection extends StatelessWidget {
         children: [
           Gap(40),
           MobileContactInfoCardWidget(),
-          // Gap(20),
-          // MobileContactFormCardWidget(),
+          Gap(20),
+          MobileContactFormCardWidget(),
           Gap(40),
         ],
       ),

@@ -4,7 +4,9 @@ import 'package:gap/gap.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hirelyticsinc/core/config/router/routes.dart';
 import 'package:hirelyticsinc/core/config/theme/app_colors.dart';
+import 'package:hirelyticsinc/core/utils/constants/app_constants.dart';
 import 'package:hirelyticsinc/core/utils/constants/dimens.dart';
+import 'package:hirelyticsinc/core/utils/extension/color_extension.dart';
 import 'package:hirelyticsinc/core/utils/helper/common_style.dart';
 
 import '../../../../../core/utils/constants/strings.dart';
@@ -69,15 +71,19 @@ class MobileTeamListSingleItem extends StatelessWidget {
             ),
           ),
           Divider(
-            color: AppColors.colorGreyLight,
+            color: AppColors.colorGrey.shade(230),
             indent: Dimens.padding16,
             endIndent: Dimens.padding16,
-            height: Dimens.padding28,
+            height: Dimens.padding16,
           ),
           TextButton(
               onPressed: () {
                 context.goNamed(Routes.memberDetails, extra: item);
               },
+              style: TextButton.styleFrom(
+                  textStyle: AppTextStyles.titleTextStyle(context,
+                      fontSize: Dimens.fontSize16)),
+              iconAlignment: IconAlignment.end,
               child: Text(viewBioText))
         ],
       ),
@@ -86,14 +92,12 @@ class MobileTeamListSingleItem extends StatelessWidget {
 
   Widget get image {
     if (item.image.source == ImgSource.assets) {
-      return Image.asset(
-        item.image.url,
-        fit: BoxFit.fill,
-      );
+      return Image.asset(item.image.url,
+          fit: BoxFit.contain, alignment: Alignment.topCenter);
     } else if (item.image.source == ImgSource.network) {
       return Image.network(
         item.image.url,
-        fit: BoxFit.fill,
+        fit: BoxFit.cover,
       );
     }
     return SizedBox.shrink();

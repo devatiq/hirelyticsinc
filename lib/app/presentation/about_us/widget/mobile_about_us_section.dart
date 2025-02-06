@@ -49,6 +49,7 @@ class MobileAboutUsSection extends StatelessWidget {
           ),
           const Gap(16),
           const MobileTeamSection(),
+          const Gap(32),
         ],
       ),
     );

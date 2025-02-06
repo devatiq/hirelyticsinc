@@ -1,5 +1,6 @@
 import 'package:flutter/widgets.dart';
-import 'package:hirelyticsinc/app/presentation/choose_us/widgets/mobile/mobile_why_choose_us_section.dart';
+import 'package:hirelyticsinc/app/presentation/blogs/widgets/mobile/mobile_blogs_section.dart';
+import 'package:hirelyticsinc/app/presentation/choose_us/widget/mobile/mobile_why_choose_us_section.dart';
 import 'package:hirelyticsinc/app/presentation/home/widget/mobile/mobile_home_section.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
@@ -18,8 +19,9 @@ class MobileLayout extends StatelessWidget {
     MobileWhyChooseUsSection(), // 1
     MobileServiceSection(), // 2 Menu.service
     MobileAboutUsSection(), // 3 Menu.about
-    MobileContactUsSection(), // 4 Menu.contact
-    MobileFooterSection(), // 5
+    MobileBlogsSection(), // 4
+    MobileContactUsSection(), // 5 Menu.contact
+    MobileFooterSection(), // 6
   ];
 
   @override

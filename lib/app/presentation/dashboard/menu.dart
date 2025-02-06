@@ -2,7 +2,7 @@ enum Menu {
   home(0, 'Home'),
   about(3, 'About'),
   service(2, 'Service'),
-  contact(4, 'Contact');
+  contact(5, 'Contact');
 
   final String title;
   final int indexValue;
