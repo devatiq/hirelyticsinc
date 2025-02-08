@@ -8,8 +8,42 @@ import 'package:hirelyticsinc/core/utils/helper/common_style.dart';
 import '../../../../../core/utils/constants/dimens.dart';
 import '../../../../../core/utils/style/text_styles.dart';
 
-class MobileContactFormCardWidget extends StatelessWidget {
+class MobileContactFormCardWidget extends StatefulWidget {
   const MobileContactFormCardWidget({super.key});
+
+  @override
+  State<MobileContactFormCardWidget> createState() =>
+      _MobileContactFormCardWidgetState();
+}
+
+class _MobileContactFormCardWidgetState
+    extends State<MobileContactFormCardWidget> {
+  late final TextEditingController _firstNameController;
+  late final TextEditingController _lastNameController;
+  late final TextEditingController _emailController;
+  late final TextEditingController _phoneController;
+  late final TextEditingController _messageController;
+
+  @override
+  void initState() {
+    super.initState();
+
+    _firstNameController = TextEditingController();
+    _lastNameController = TextEditingController();
+    _emailController = TextEditingController();
+    _phoneController = TextEditingController();
+    _messageController = TextEditingController();
+  }
+
+  @override
+  void dispose() {
+    _firstNameController.dispose();
+    _lastNameController.dispose();
+    _emailController.dispose();
+    _phoneController.dispose();
+    _messageController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +62,9 @@ class MobileContactFormCardWidget extends StatelessWidget {
           ..._buildTextFields(context),
           Gap(40),
           InkWell(
-            onTap: () {},
+            onTap: () {
+              _submitForm(context);
+            },
             child: Container(
               width: double.infinity,
               alignment: Alignment.center,
@@ -59,25 +95,31 @@ class MobileContactFormCardWidget extends StatelessWidget {
       //first name
       _textFieldTitle(context, firstNameText),
       formTitleContentGap,
-      const CustomFormTextField(),
+      CustomFormTextField(controller: _firstNameController),
       formEachItemGap,
 
       //last name
       _textFieldTitle(context, lastNameText),
       formTitleContentGap,
-      const CustomFormTextField(),
+      CustomFormTextField(controller: _lastNameController),
       formEachItemGap,
 
       //email
       _textFieldTitle(context, emailText),
       formTitleContentGap,
-      const CustomFormTextField(),
+      CustomFormTextField(controller: _emailController),
+      formEachItemGap,
+
+      //phone
+      _textFieldTitle(context, phoneText),
+      formTitleContentGap,
+      CustomFormTextField(controller: _phoneController),
       formEachItemGap,
 
       // message
       _textFieldTitle(context, messageText),
       formTitleContentGap,
-      const CustomFormTextField(maxLines: 6),
+      CustomFormTextField(maxLines: 6, controller: _messageController),
     ];
   }
 
@@ -88,5 +130,14 @@ class MobileContactFormCardWidget extends StatelessWidget {
           fontWeight: FontWeight.normal,
           fontSize: Dimens.fontSize16,
         ));
+  }
+
+  void _submitForm(BuildContext context) {
+    final firstName = _firstNameController.text;
+    final lastName = _lastNameController.text;
+    final email = _emailController.text;
+    final phone = _phoneController.text;
+    final message = _messageController.text;
+
   }
 }

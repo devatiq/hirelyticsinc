@@ -14,8 +14,8 @@ class GetBlogsUseCase implements UseCase<List<BlogEntity>, GetBlogsParams> {
 
   @override
   Future<Either<Failure, List<BlogEntity>>> call(GetBlogsParams params) async {
-    final result =
-        await repository.getBlogsRemote(BlogRemotePostModel(id: params.id));
+    final result = await repository.getBlogsRemote(
+        BlogRemotePostModel(page: params.page, perPage: params.perPage));
     return result.fold((l) => Left(l), (r) {
       final entityList = r
           .map((e) => BlogEntity(
@@ -34,9 +34,8 @@ class GetBlogsUseCase implements UseCase<List<BlogEntity>, GetBlogsParams> {
 }
 
 class GetBlogsParams {
-  final int id;
+  final int? page;
+  final int? perPage;
 
-  const GetBlogsParams({
-    required this.id,
-  });
+  const GetBlogsParams({this.page, this.perPage});
 }

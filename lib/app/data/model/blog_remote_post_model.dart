@@ -1,19 +1,23 @@
 class BlogRemotePostModel {
-  final int id;
+  final int? page;
+  final int? perPage;
 
   const BlogRemotePostModel({
-    required this.id,
+    required this.page,
+    required this.perPage,
   });
 
   Map<String, dynamic> toMap() {
     return {
-      'id': this.id,
+      'page': page,
+      'per_page': perPage,
     };
   }
 
   factory BlogRemotePostModel.fromMap(Map<String, dynamic> map) {
     return BlogRemotePostModel(
-      id: map['id'] as int,
+      page: map['page'] as int?,
+      perPage: map['per_page'] as int?,
     );
   }
 }

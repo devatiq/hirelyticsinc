@@ -42,6 +42,28 @@ class MobileBlogsSection extends ConsumerWidget {
             error: (error, stackTrace) => Html(data: error.toString()),
             loading: () => CircularProgressIndicator(),
           ),
+          // Consumer(
+          //   builder: (context, ref, child) {
+          //     final blogs = ref.watch(blogPaginationProvider);
+          //     final blogNotifier = ref.read(blogPaginationProvider.notifier);
+          //     return ListView.builder(
+          //         // extra item for the loading indicator
+          //         itemCount: blogs.length + 1,
+          //         shrinkWrap: true,
+          //         primary: false,
+          //         physics: NeverScrollableScrollPhysics(),
+          //         itemBuilder: (context, index) {
+          //           if (index < blogs.length) {
+          //             return MobileBlogSingleItem(item: blogs[index]);
+          //           } else if (blogNotifier.hasMore) {
+          //             blogNotifier.fetchBlogs();
+          //             return Center(child: CircularProgressIndicator());
+          //           } else {
+          //             return SizedBox.shrink();
+          //           }
+          //         });
+          //   },
+          // ),
         ],
       ),
     );
