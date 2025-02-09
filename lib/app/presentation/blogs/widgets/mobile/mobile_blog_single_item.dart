@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:gap/gap.dart';
 import 'package:hirelyticsinc/app/domain/entity/blog_entity.dart';
 import 'package:hirelyticsinc/core/utils/extension/color_extension.dart';
@@ -47,7 +46,7 @@ class MobileBlogSingleItem extends StatelessWidget {
                         fontSize: Dimens.fontSize16,
                         fontWeight: FontWeight.bold),
                   ),
-                  Gap(Dimens.padding8),
+                 const Gap(Dimens.padding8),
                   Wrap(
                     children: List.generate(
                         item.category.length ?? 0,
@@ -55,19 +54,23 @@ class MobileBlogSingleItem extends StatelessWidget {
                               padding: EdgeInsets.symmetric(
                                   horizontal: Dimens.padding8),
                               decoration: BoxDecoration(
-                                  color:
-                                      Theme.of(context).colorScheme.secondary.shade(220),
+                                  color: Theme.of(context)
+                                      .colorScheme
+                                      .secondary
+                                      .shade(220),
                                   borderRadius: BorderRadius.circular(
                                       Dimens.borderRadius10)),
                               child: Text(
                                 item.category[i],
                                 style: AppTextStyles.subtitleTextStyle(context,
                                     fontSize: Dimens.fontSize12,
-                                    color: Theme.of(context).colorScheme.secondary),
+                                    color: Theme.of(context)
+                                        .colorScheme
+                                        .secondary),
                               ),
                             )),
                   ),
-                  Gap(Dimens.padding8),
+                  const Gap(Dimens.padding8),
                 ],
               ),
             )

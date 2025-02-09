@@ -5,8 +5,6 @@ import 'package:hirelyticsinc/app/domain/repository/repository.dart';
 import 'package:hirelyticsinc/core/error/data_state.dart';
 import 'package:hirelyticsinc/core/usecase/usecase.dart';
 
-import '../../data/model/blog_remote_response_model.dart';
-
 class GetBlogsUseCase implements UseCase<List<BlogEntity>, GetBlogsParams> {
   final Repository repository;
 

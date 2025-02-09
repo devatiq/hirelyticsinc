@@ -73,10 +73,10 @@ class RemoteService extends IRemoteService {
       final response = await apiService.dio.post(
           ApiConstants.submitFormEndPoint,
           options: options,
-          queryParameters: model.toMap());
+          data: model.toMap());
 
       if (response.statusCode == 200 || response.statusCode == 201) {
-        final responseData = response.data as List?;
+        final responseData = response.data;
         if (responseData != null) {
           final model = SubmitFormRemoteResponseModel.fromJson(
               apiService.getMap(responseData));

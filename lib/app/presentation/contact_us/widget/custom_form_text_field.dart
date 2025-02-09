@@ -5,8 +5,16 @@ import 'package:hirelyticsinc/core/utils/constants/dimens.dart';
 class CustomFormTextField extends StatelessWidget {
   final int? maxLines;
   final TextEditingController? controller;
+  final TextInputType? keyboardType;
 
-  const CustomFormTextField({super.key, this.maxLines, this.controller});
+  final String? Function(String?)? validator;
+
+  const CustomFormTextField(
+      {super.key,
+      this.maxLines,
+      this.controller,
+      this.validator,
+      this.keyboardType});
 
   @override
   Widget build(BuildContext context) {
@@ -17,6 +25,8 @@ class CustomFormTextField extends StatelessWidget {
     return TextFormField(
       maxLines: maxLines,
       controller: controller,
+      validator: validator,
+      keyboardType: keyboardType,
       decoration: InputDecoration(
           isDense: true,
           border: border,

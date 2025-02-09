@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "292289172652",
+    "project_id": "hirelytics-5c2b2",
+    "storage_bucket": "hirelytics-5c2b2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:292289172652:android:cd9e8a2712ef867713fb09",
+        "android_client_info": {
+          "package_name": "com.hirelyticsinc.mobile"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0MPmKmn359TFus8fqirrgMPOrDB-fhRI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

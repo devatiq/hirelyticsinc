@@ -38,7 +38,7 @@ class ExceptionHandler {
       case DioExceptionType.badResponse:
         switch (error.response!.statusCode) {
           case 400:
-            return WrapperException("Bad request");
+            return WrapperException("Bad request error");
           case 401:
             return WrapperException("Permission denied");
           case 403:

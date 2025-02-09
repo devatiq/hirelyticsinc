@@ -1,3 +1,4 @@
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hirelyticsinc/core/config/router/app_router.dart';
@@ -8,6 +9,7 @@ import 'core/config/theme/app_theme.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
   await setup();
   runApp(ProviderScope(child: const MyApp()));
 }
@@ -18,6 +20,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    FirebaseMessaging.instance.getToken().then((token) => print(token));
     return MaterialApp.router(
       title: AppConstants.appName,
       debugShowCheckedModeBanner: false,

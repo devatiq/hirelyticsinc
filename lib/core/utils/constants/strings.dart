@@ -96,16 +96,21 @@ const String atHirelyticsWeAreDedicatedTo =
 const String meetTheTeam = 'Meet The Team';
 const String viewBioText = 'View Bio';
 
+
+//blog section
+const String latestBlogPosts = 'Latest Blog Posts';
+const String noBlogsFound = 'No Blogs Found';
+
 // contact us section
 const String contactUsText = 'Contact Us';
 const String emailText = 'Email';
 const String phoneText = 'Phone';
 const String locationText = 'Location';
-const String sendUsAMessage = 'Send Us A Message';
+const String sendUsAMessageText = 'Send Us A Message';
 const String firstNameText = 'First Name';
 const String lastNameText = 'Last Name';
 const String messageText = 'Message';
-const String submitFormButtonText = 'Submit Form';
+const String submitButtonText = 'Submit';
 
 // footer section
 const String connectText = 'Connect';

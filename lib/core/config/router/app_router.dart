@@ -1,3 +1,4 @@
+import 'package:flutter/widgets.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hirelyticsinc/app/presentation/dashboard/page/dashboard_page.dart';
 import 'package:hirelyticsinc/core/config/router/routes.dart';
@@ -5,11 +6,13 @@ import 'package:hirelyticsinc/core/config/router/routes.dart';
 import '../../../app/presentation/team/page/mobile/mobile_team_details_page.dart';
 import '../../../app/presentation/team/team_view_model.dart';
 
+final rootNavigatorKey = GlobalKey<NavigatorState>();
+
 abstract class AppRouter {
   static GoRouter router = GoRouter(
+      navigatorKey: rootNavigatorKey,
       debugLogDiagnostics: true,
       initialLocation: '/dashboard',
-
       routes: [
         GoRoute(
             name: Routes.dashboard,

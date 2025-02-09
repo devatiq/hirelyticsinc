@@ -15,21 +15,21 @@ class SubmitFormRemotePostModel {
 
   Map<String, dynamic> toMap() {
     return {
-      'input_1_1_3': firstName,
-      'input_1_1_6': lastName,
-      'input_1_3': email,
-      'input_1_4': phone,
-      'input_1_5': message,
+      'input_1.3': firstName,
+      'input_1.6': lastName,
+      'input_3': email,
+      'input_4': phone,
+      'input_5': message,
     };
   }
 
   factory SubmitFormRemotePostModel.fromMap(Map<String, dynamic> map) {
     return SubmitFormRemotePostModel(
-      firstName: map['input_1_1_3'] as String,
-      lastName: map['input_1_1_6'] as String,
-      email: map['input_1_3'] as String,
-      phone: map['input_1_4'] as String,
-      message: map['input_1_5'] as String,
+      firstName: map['input_1.3'] as String,
+      lastName: map['input_1.6'] as String,
+      email: map['input_3'] as String,
+      phone: map['input_4'] as String,
+      message: map['input_5'] as String,
     );
   }
 }

@@ -4,7 +4,6 @@ import 'package:gap/gap.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hirelyticsinc/core/config/router/routes.dart';
 import 'package:hirelyticsinc/core/config/theme/app_colors.dart';
-import 'package:hirelyticsinc/core/utils/constants/app_constants.dart';
 import 'package:hirelyticsinc/core/utils/constants/dimens.dart';
 import 'package:hirelyticsinc/core/utils/extension/color_extension.dart';
 import 'package:hirelyticsinc/core/utils/helper/common_style.dart';

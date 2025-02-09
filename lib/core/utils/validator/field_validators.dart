@@ -1,19 +1,23 @@
 
+import 'package:email_validator/email_validator.dart';
+
 class FieldValidators {
-  static String? Function(String? value)? nameValidator = (value) {
+  static String? Function(String? value)? firstNameValidator = (value) {
     if (value == null || value.trim().isEmpty) {
-      return "Name empty";
+      return "Name is required";
     }
     return null;
   };
+
+
 
   static String? Function(String? value)? emailValidator = (value) {
     if (value == null || value.trim().isEmpty) {
       return "Email is required";
     }
-    // if (!EmailValidator.validate(value.trim())) {
-    //   return 'Enter a valid email';
-    // }
+    if (!EmailValidator.validate(value.trim())) {
+      return 'Enter a valid email';
+    }
     return null;
   };
 

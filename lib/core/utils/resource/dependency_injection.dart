@@ -5,12 +5,16 @@ import 'package:hirelyticsinc/app/data/service/remote_service.dart';
 import 'package:path_provider/path_provider.dart';
 
 import '../../../app/domain/usecase/get_blogs_use_case.dart';
+import '../../../app/domain/usecase/submit_form_use_case.dart';
 import '../../network/base_api_service.dart';
+import '../../notification/firebase_notification_manager.dart';
 
 final getIt = GetIt.instance;
 
 Future<void> setup() async {
   await _deviceOrientation();
+
+  await _initNotification();
 
   await initDirectory();
 
@@ -19,6 +23,12 @@ Future<void> setup() async {
   registeredRepositoryAndServices();
 
   await _svgLoader();
+}
+
+Future<void> _initNotification() async {
+  await FirebaseNotificationManager.instance.initialize();
+
+  //await FirebaseNotificationManager.instance.subscribeToTopic(NotificationTopics.notificationTopicInfo);
 }
 
 Future<void> _svgLoader() async {
@@ -69,7 +79,7 @@ void registeredRepositoryAndServices() {
   //base local service - end
 
   //base api - start
-  final baseApiService = _registerIfNot<BaseApiService>(BaseApiService());
+  final baseApiService = _registerIfNot(BaseApiService());
   //base api - end
 
   /// service
@@ -86,17 +96,17 @@ void registeredRepositoryAndServices() {
 
   //api service (dio) - start
 
-  final remoteService =
-      _registerIfNot<RemoteService>(RemoteService(baseApiService));
+  final remoteService = _registerIfNot(RemoteService(baseApiService));
 
   //api service (dio) - end
 
   ///repositories
 
-  final repo = _registerIfNot<RepositoryImpl>(RepositoryImpl(
+  final repo = _registerIfNot(RepositoryImpl(
     remoteService: remoteService,
   ));
 
   //register auth use case
-  _registerLazyIfNot<GetBlogsUseCase>(GetBlogsUseCase(repo));
+  _registerLazyIfNot(GetBlogsUseCase(repo));
+  _registerLazyIfNot(SubmitFormUseCase(repo));
 }
