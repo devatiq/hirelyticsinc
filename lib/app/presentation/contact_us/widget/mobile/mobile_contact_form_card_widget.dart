@@ -62,7 +62,7 @@ class _MobileContactFormCardWidgetState
       width: double.infinity,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(Dimens.borderRadius16),
-          boxShadow: CommonStyle.boxShadow(colorOpacity: 0.05)),
+          boxShadow: CommonStyle.boxShadow(colorOpacity: 0.10)),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

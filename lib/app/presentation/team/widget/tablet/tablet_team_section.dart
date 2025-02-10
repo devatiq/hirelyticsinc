@@ -4,8 +4,8 @@ import 'package:hirelyticsinc/app/presentation/team/provider/team_provider.dart'
 import 'package:hirelyticsinc/app/presentation/team/widget/mobile/mobile_team_list_single_item.dart';
 import 'package:hirelyticsinc/core/utils/constants/dimens.dart';
 
-class MobileTeamSection extends ConsumerWidget {
-  const MobileTeamSection({super.key});
+class TabletTeamSection extends ConsumerWidget {
+  const TabletTeamSection({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -21,7 +21,7 @@ class MobileTeamSection extends ConsumerWidget {
             primary: false,
             physics: const NeverScrollableScrollPhysics(),
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 1,
+                crossAxisCount: 2,
                 mainAxisSpacing: Dimens.padding16,
                 crossAxisSpacing: Dimens.padding16,
                 childAspectRatio:  0.8),

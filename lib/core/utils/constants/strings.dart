@@ -23,20 +23,20 @@ const String atHirelyticsWeUnderstand =
 
 const List<WhyChooseUsCardDataModel> whyChooseUsCardInfoList = [
   WhyChooseUsCardDataModel(
-      icon: Assets.seoBoxPng,
+      icon: Assets.seoBoxSvg,
       titleDescription: TitleDescriptionModel(
           title: 'Unclear ROI',
           description:
               'Are your hiring efforts yielding measurable results? We provide clarity and metrics to ensure success.')),
   WhyChooseUsCardDataModel(
-    icon: Assets.announcementPng,
+    icon: Assets.announcementSvg,
     titleDescription: TitleDescriptionModel(
         title: 'Standalone TA Analytics',
         description:
             'Struggling to build a robust Minimum Viable Product? We help you create scalable, tech-driven solutions.'),
   ),
   WhyChooseUsCardDataModel(
-    icon: Assets.checkFilePng,
+    icon: Assets.checkFileSvg,
     titleDescription: TitleDescriptionModel(
         title: 'Clear Engagement Strategy',
         description:
@@ -96,7 +96,6 @@ const String atHirelyticsWeAreDedicatedTo =
 const String meetTheTeam = 'Meet The Team';
 const String viewBioText = 'View Bio';
 
-
 //blog section
 const String latestBlogPosts = 'Latest Blog Posts';
 const String noBlogsFound = 'No Blogs Found';
@@ -116,13 +115,21 @@ const String submitButtonText = 'Submit';
 const String connectText = 'Connect';
 const List<SocialButtonDataModel> socialButtonDataList = [
   SocialButtonDataModel(
-      title: 'Facebook', iconPath: Assets.socialFacebookSvg, url: 'https://www.facebook.com/hirelyticsinc/'),
+      title: 'Facebook',
+      iconPath: Assets.socialFacebookSvg,
+      url: 'https://www.facebook.com/hirelyticsinc/'),
   SocialButtonDataModel(
-      title: 'Instagram', iconPath: Assets.socialInstagramSvg, url: 'https://www.instagram.com/hirelyticsinc/'),
+      title: 'Instagram',
+      iconPath: Assets.socialInstagramSvg,
+      url: 'https://www.instagram.com/hirelyticsinc/'),
   SocialButtonDataModel(
-      title: 'Twitter/X', iconPath: Assets.socialTwitterOrXSvg, url: 'https://x.com/hirelyticsinc'),
+      title: 'Twitter/X',
+      iconPath: Assets.socialTwitterOrXSvg,
+      url: 'https://x.com/hirelyticsinc'),
   SocialButtonDataModel(
-      title: 'Linkedin', iconPath: Assets.socialLinkedinSvg, url: 'https://www.linkedin.com/company/hirelyticstech/'),
+      title: 'Linkedin',
+      iconPath: Assets.socialLinkedinSvg,
+      url: 'https://www.linkedin.com/company/hirelyticstech/'),
 ];
 
 const String organizationContactAddress =

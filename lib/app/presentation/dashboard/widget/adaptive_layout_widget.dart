@@ -1,4 +1,5 @@
 import 'package:flutter/widgets.dart';
+import 'package:hirelyticsinc/core/utils/constants/dimens.dart';
 
 class AdaptiveLayoutWidget extends StatelessWidget {
   final WidgetBuilder mobileLayout;
@@ -9,8 +10,9 @@ class AdaptiveLayoutWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return LayoutBuilder(builder: (context, constraints) {
-      if (constraints.maxWidth < 600) {
+      if (constraints.maxWidth <=  Dimens.maxMobileWidthBreakPoint) {
         return mobileLayout(context);
       } else {
         return tabletLayout(context);

@@ -7,10 +7,10 @@ import 'package:hirelyticsinc/core/utils/constants/strings.dart';
 import 'package:hirelyticsinc/core/utils/style/text_styles.dart';
 
 import '../../../../shared/widget/mobile/learn_more_button.dart';
-import 'mobile_service_card_widget.dart';
+import '../mobile/mobile_service_card_widget.dart';
 
-class MobileServiceSection extends StatelessWidget {
-  const MobileServiceSection({super.key});
+class TabletServiceSection extends StatelessWidget {
+  const TabletServiceSection({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,8 +23,7 @@ class MobileServiceSection extends StatelessWidget {
           Text(
             top3SolutionToYourProblem,
             textAlign: TextAlign.center,
-            style: AppTextStyles.titleTextStyle(context,
-                fontSize: Dimens.fontSize25),
+            style: AppTextStyles.titleTextStyle(context, fontSize: 25),
           ),
           const Gap(16),
           _buildServiceCards(context),
@@ -36,7 +35,7 @@ class MobileServiceSection extends StatelessWidget {
                 fontSize: Dimens.fontSize16),
           ),
           const Gap(16),
-          const LearnMoreButton(),
+          LearnMoreButton(),
           const Gap(32),
         ],
       ),
@@ -45,14 +44,17 @@ class MobileServiceSection extends StatelessWidget {
 
   Widget _buildServiceCards(BuildContext context) {
     final list = serviceCardInfoList;
-    return Column(
+    return Row(
       spacing: Dimens.padding16,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: List.generate(
           list.length,
-          (index) => MobileServiceCardWidget(
-              image: list[index].image,
-              title: list[index].titleDescription.title,
-              description: list[index].titleDescription.description)),
+              (index) => Expanded(
+                child: MobileServiceCardWidget(
+                    image: list[index].image,
+                    title: list[index].titleDescription.title,
+                    description: list[index].titleDescription.description),
+              )),
     );
   }
 }

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
+import 'package:hirelyticsinc/core/config/theme/app_colors.dart';
 import 'package:hirelyticsinc/core/utils/constants/dimens.dart';
 import 'package:hirelyticsinc/core/utils/helper/common_style.dart';
 
@@ -19,9 +21,8 @@ class ChooseUsCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 250,
       width: double.infinity,
-      padding: EdgeInsets.all(Dimens.padding24),
+      padding: const EdgeInsets.all(Dimens.padding24),
       decoration: BoxDecoration(
         color: Colors.white,
         boxShadow: CommonStyle.boxShadow(blurRadius: 10, colorOpacity: 0.1),
@@ -31,22 +32,24 @@ class ChooseUsCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            padding: EdgeInsets.all(Dimens.padding16),
+            padding: const EdgeInsets.all(Dimens.padding16),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(Dimens.borderRadius16),
               color: Theme.of(context).colorScheme.secondary,
             ),
-            child: Image.asset(
+            child: SvgPicture.asset(
               icon,
               height: Dimens.iconSize40,
+              colorFilter: ColorFilter.mode(
+                  Theme.of(context).colorScheme.onSecondary, BlendMode.srcIn),
             ),
           ),
-          Gap(16),
+          const Gap(16),
           Text(
             title,
             style: AppTextStyles.titleTextStyle(context, fontSize: 20),
           ),
-          Gap(16),
+          const Gap(16),
           Text(
             description,
             style: AppTextStyles.subtitleTextStyle(context, fontSize: 16),

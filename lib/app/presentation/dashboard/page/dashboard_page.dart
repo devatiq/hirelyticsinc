@@ -5,6 +5,7 @@ import 'package:hirelyticsinc/app/presentation/dashboard/provider/dashboard_prov
 import 'package:hirelyticsinc/app/presentation/dashboard/widget/adaptive_layout_widget.dart';
 import 'package:hirelyticsinc/app/presentation/dashboard/widget/mobile/mobile_app_drawer.dart';
 import 'package:hirelyticsinc/app/presentation/dashboard/widget/mobile_layout.dart';
+import 'package:hirelyticsinc/app/presentation/dashboard/widget/tablet_layout.dart';
 import 'package:hirelyticsinc/core/config/theme/app_colors.dart';
 import 'package:hirelyticsinc/core/utils/constants/dimens.dart';
 import 'package:hirelyticsinc/core/utils/extension/number_extension.dart';
@@ -24,7 +25,7 @@ class DashboardPage extends ConsumerWidget {
         mobileLayout: (context) => MobileLayout(
           itemScrollController: provider.controller,
         ),
-        tabletLayout: (context) => MobileLayout(
+        tabletLayout: (context) => TabletLayout(
           itemScrollController: provider.controller,
         ),
       ),

@@ -7,9 +7,9 @@ abstract class Assets {
   //icons
   ///menu icons (assets/icons/menu.png)
   static const navMenuSvg = 'assets/icons/menu.svg';
-  static const announcementPng = 'assets/icons/announcement.png';
-  static const checkFilePng = 'assets/icons/check_file.png';
-  static const seoBoxPng = 'assets/icons/seo_box.png';
+  static const announcementSvg = 'assets/icons/announcement.svg';
+  static const checkFileSvg = 'assets/icons/check_file.svg';
+  static const seoBoxSvg = 'assets/icons/seo_box.svg';
 
   static const locationPinSvg = 'assets/icons/location_pin.svg';
   static const callDialSvg = 'assets/icons/call_dial.svg';

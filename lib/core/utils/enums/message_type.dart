@@ -1,25 +1,28 @@
 import '../../config/theme/app_colors.dart';
 
-enum MessageType{
-  normal, error, info, warning, success;
+enum MessageType {
+  normal,
+  error,
+  info,
+  warning,
+  success;
 }
 
 getMessageColor(MessageType type) {
   switch (type) {
     case MessageType.normal:
       return AppColors.colorAppBlueDark;
-      break;
+
     case MessageType.error:
-      return  AppColors.colorAppRed;
-      break;
+      return AppColors.colorAppRed;
+
     case MessageType.info:
       return AppColors.colorAppGrey;
-      break;
+
     case MessageType.success:
-      return  AppColors.colorAppGreen;
-      break;
+      return AppColors.colorAppGreen;
+
     case MessageType.warning:
-      return  AppColors.colorAppYellow;
-      break;
+      return AppColors.colorAppYellow;
   }
 }

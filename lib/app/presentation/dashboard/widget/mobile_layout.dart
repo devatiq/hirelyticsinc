@@ -4,7 +4,7 @@ import 'package:hirelyticsinc/app/presentation/choose_us/widget/mobile/mobile_wh
 import 'package:hirelyticsinc/app/presentation/home/widget/mobile/mobile_home_section.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
-import '../../about_us/widget/mobile_about_us_section.dart';
+import '../../about_us/widget/mobile/mobile_about_us_section.dart';
 import '../../contact_us/widget/mobile/mobile_contact_us_section.dart';
 import '../../footer/widget/mobile/mobile_footer_section.dart';
 import '../../service/widget/mobile/mobile_service_section.dart';
@@ -28,6 +28,7 @@ class MobileLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScrollablePositionedList.builder(
       itemCount: items.length,
+      physics: ClampingScrollPhysics(),
       itemScrollController: itemScrollController,
       itemBuilder: (context, index) => items[index],
     );

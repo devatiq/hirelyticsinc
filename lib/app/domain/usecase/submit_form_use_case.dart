@@ -1,4 +1,4 @@
-import 'package:fpdart/src/either.dart';
+import 'package:fpdart/fpdart.dart';
 import 'package:hirelyticsinc/app/domain/repository/repository.dart';
 import 'package:hirelyticsinc/core/error/data_state.dart';
 import 'package:hirelyticsinc/core/usecase/usecase.dart';

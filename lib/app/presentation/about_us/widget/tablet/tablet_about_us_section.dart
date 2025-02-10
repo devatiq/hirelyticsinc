@@ -4,12 +4,12 @@ import 'package:hirelyticsinc/core/utils/constants/dimens.dart';
 import 'package:hirelyticsinc/core/utils/constants/strings.dart';
 import 'package:hirelyticsinc/core/utils/style/text_styles.dart';
 
-import '../../../../core/utils/constants/assets.dart';
-import '../../../shared/widget/mobile/stack_image_view_widget.dart';
-import '../../team/widget/mobile/mobile_team_section.dart';
+import '../../../../../core/utils/constants/assets.dart';
+import '../../../../shared/widget/mobile/stack_image_view_widget.dart';
+import '../../../team/widget/tablet/tablet_team_section.dart';
 
-class MobileAboutUsSection extends StatelessWidget {
-  const MobileAboutUsSection({super.key});
+class TabletAboutUsSection extends StatelessWidget {
+  const TabletAboutUsSection({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -48,7 +48,7 @@ class MobileAboutUsSection extends StatelessWidget {
             ),
           ),
           const Gap(16),
-          const MobileTeamSection(),
+          const TabletTeamSection(),
           const Gap(32),
         ],
       ),

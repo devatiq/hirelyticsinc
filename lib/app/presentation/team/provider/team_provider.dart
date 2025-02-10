@@ -6,7 +6,6 @@ import 'package:hirelyticsinc/core/utils/helper/helper_functions.dart';
 import '../../../../core/utils/constants/assets.dart';
 
 final teamProvider = FutureProvider<List<TeamViewModel>>((ref) async {
-  print('Loading team list...');
   try {
     // Load JSON data from assets
     final mapList = (await loadJsonFromAssets(Assets.teamsDataJson)) as List;
@@ -32,7 +31,7 @@ final teamProvider = FutureProvider<List<TeamViewModel>>((ref) async {
           [],
     )).toList();
   } catch (e) {
-    print('Error loading team list: $e');
+
     rethrow; // Re-throw the error to propagate it to the UI
   }
 });

@@ -12,7 +12,7 @@ import '../../notification/firebase_notification_manager.dart';
 final getIt = GetIt.instance;
 
 Future<void> setup() async {
-  await _deviceOrientation();
+  //await _deviceOrientation();
 
   await _initNotification();
 

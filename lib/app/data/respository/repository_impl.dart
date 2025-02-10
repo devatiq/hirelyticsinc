@@ -1,4 +1,4 @@
-import 'package:fpdart/src/either.dart';
+import 'package:fpdart/fpdart.dart';
 import 'package:hirelyticsinc/app/data/model/blog_remote_post_model.dart';
 import 'package:hirelyticsinc/app/data/model/blog_remote_response_model.dart';
 import 'package:hirelyticsinc/app/data/model/submit_form_remote_post_model.dart';

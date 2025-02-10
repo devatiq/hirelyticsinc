@@ -28,12 +28,14 @@ class MobileBlogSingleItem extends StatelessWidget {
             borderRadius: BorderRadius.circular(Dimens.borderRadius10),
             boxShadow: CommonStyle.boxShadow()),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Image.network(
               item.featuredImage ?? '',
               height: 180,
               width: double.infinity,
               fit: BoxFit.cover,
+              alignment: Alignment.center,
             ),
             Padding(
               padding: EdgeInsets.all(Dimens.padding8),
@@ -46,10 +48,10 @@ class MobileBlogSingleItem extends StatelessWidget {
                         fontSize: Dimens.fontSize16,
                         fontWeight: FontWeight.bold),
                   ),
-                 const Gap(Dimens.padding8),
+                  const Gap(Dimens.padding8),
                   Wrap(
                     children: List.generate(
-                        item.category.length ?? 0,
+                        item.category.length,
                         (i) => Container(
                               padding: EdgeInsets.symmetric(
                                   horizontal: Dimens.padding8),

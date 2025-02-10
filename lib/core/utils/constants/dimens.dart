@@ -1,5 +1,5 @@
 abstract class Dimens {
-  static const tabletBreakpoint = 600.0;
+  static const maxMobileWidthBreakPoint = 600.0;
   static const desktopBreakpoint = 1200.0;
 
   static const double horizontalSpace = 12;

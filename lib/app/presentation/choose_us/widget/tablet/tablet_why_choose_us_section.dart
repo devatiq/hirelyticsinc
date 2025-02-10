@@ -1,16 +1,16 @@
 import 'package:flutter/widgets.dart';
 import 'package:gap/gap.dart';
-import 'package:hirelyticsinc/app/presentation/choose_us/widget/choose_us_card.dart';
-import 'package:hirelyticsinc/app/presentation/choose_us/widget/title_subtitle_text_view_widget.dart';
-import 'package:hirelyticsinc/core/utils/constants/strings.dart';
-import 'package:hirelyticsinc/core/utils/style/text_styles.dart';
 
 import '../../../../../core/utils/constants/assets.dart';
 import '../../../../../core/utils/constants/dimens.dart';
+import '../../../../../core/utils/constants/strings.dart';
+import '../../../../../core/utils/style/text_styles.dart';
 import '../../../../shared/widget/mobile/stack_image_view_widget.dart';
+import '../choose_us_card.dart';
+import '../title_subtitle_text_view_widget.dart';
 
-class MobileWhyChooseUsSection extends StatelessWidget {
-  const MobileWhyChooseUsSection({super.key});
+class TabletWhyChooseUsSection extends StatelessWidget {
+  const TabletWhyChooseUsSection({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -60,17 +60,21 @@ class MobileWhyChooseUsSection extends StatelessWidget {
 
   Widget _buildCard(BuildContext context) {
     final list = whyChooseUsCardInfoList;
-    return Column(
+    return Row(
       spacing: Dimens.padding16,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: List.generate(
         list.length,
-        (index) => ChooseUsCard(
-            icon: list[index].icon,
-            title: list[index].titleDescription.title,
-            description: list[index].titleDescription.description),
+            (index) => Expanded(
+              child: ChooseUsCard(
+              icon: list[index].icon,
+              title: list[index].titleDescription.title,
+              description: list[index].titleDescription.description),
+            ),
       ),
     );
   }
+
 
   Widget _buildChooseList(BuildContext context) {
     final list = whyChooseUseReasonList;
@@ -80,7 +84,7 @@ class MobileWhyChooseUsSection extends StatelessWidget {
         spacing: Dimens.padding16,
         children: List.generate(
             list.length,
-            (index) => TitleSubtitleTextViewWidget(
+                (index) => TitleSubtitleTextViewWidget(
                 title: list[index].title, subtitle: list[index].description)),
       ),
     );
