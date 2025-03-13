@@ -15,7 +15,7 @@ class MobileHomeSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         gradient: AppColors.kGradiantHomePage,
         image: DecorationImage(
             colorFilter: ColorFilter.matrix([
@@ -27,11 +27,11 @@ class MobileHomeSection extends StatelessWidget {
             image: AssetImage(Assets.homeImageBackgroundWebp),
             fit: BoxFit.cover),
       ),
-      padding: EdgeInsets.symmetric(horizontal: Dimens.horizontalSpace),
+      padding: const EdgeInsets.symmetric(horizontal: Dimens.horizontalSpace),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Gap(40),
+          const Gap(40),
           Text(
             empoweringInnovationText,
             style: AppTextStyles.titleTextStyle(context,
@@ -46,7 +46,7 @@ class MobileHomeSection extends StatelessWidget {
             ),
           ),
           const Gap(16),
-          LearnMoreButton(),
+          const LearnMoreButton(),
           const Gap(24),
           _buildCountingTextData(
             context,
@@ -55,14 +55,14 @@ class MobileHomeSection extends StatelessWidget {
             subtitle:
                 'of companies don’t use data analytics to improve their hiring process',
           ),
-          Gap(8),
+          const Gap(8),
           _buildCountingTextData(context,
               count: 40,
               countExtension: '%',
               subtitle:
                   'faster time-to-hire for companies using data-driven strategies',
               titleColor: Theme.of(context).primaryColor),
-          Gap(8),
+          const Gap(8),
           _buildCountingTextData(
             context,
             count: 3,
@@ -70,7 +70,7 @@ class MobileHomeSection extends StatelessWidget {
             subtitle:
                 'more accurate candidate selection powered by predictive analytics',
           ),
-          Gap(32),
+          const Gap(32),
         ],
       ),
     );
@@ -90,7 +90,7 @@ class MobileHomeSection extends StatelessWidget {
           Countup(
             begin: 0,
             end: count,
-            duration: Duration(seconds: 2),
+            duration:const  Duration(seconds: 2),
             curve: Curves.decelerate,
             textAlign: TextAlign.center,
             separator: ',',

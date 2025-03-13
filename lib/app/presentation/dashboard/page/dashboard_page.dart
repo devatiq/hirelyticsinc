@@ -20,7 +20,7 @@ class DashboardPage extends ConsumerWidget {
     final provider = ref.read(dashboardProvider);
     return Scaffold(
       appBar: _buildMobileAppBar(context),
-      endDrawer: MobileAppDrawer(),
+      endDrawer: const MobileAppDrawer(),
       body: AdaptiveLayoutWidget(
         mobileLayout: (context) => MobileLayout(
           itemScrollController: provider.controller,

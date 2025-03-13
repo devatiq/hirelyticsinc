@@ -20,55 +20,56 @@ class ExceptionHandler {
       return const FormatException('Bad Response Format');
     }
 
-    return WrapperException();
+    return const WrapperException();
   }
 
   static WrapperException getDioError(DioException error) {
     switch (error.type) {
       case DioExceptionType.connectionTimeout:
-        return WrapperException("Connection timed out");
+        return const WrapperException("Connection timed out");
       case DioExceptionType.receiveTimeout:
-        return WrapperException("Receiving timeout occurred");
+        return const WrapperException("Receiving timeout occurred");
       case DioExceptionType.sendTimeout:
-        return WrapperException("Request send timed out");
+        return const WrapperException("Request send timed out");
 
       case DioExceptionType.badCertificate:
-        return WrapperException("Bad SSL certificates");
+        return const WrapperException("Bad SSL certificates");
 
       case DioExceptionType.badResponse:
         switch (error.response!.statusCode) {
           case 400:
-            return WrapperException("Bad request error");
+            return const WrapperException("Bad request error");
           case 401:
-            return WrapperException("Permission denied");
+            return const WrapperException("Permission denied");
           case 403:
-            return WrapperException(
+            return const WrapperException(
                 "The authenticated user is not allowed to access the specified API endpoint");
           case 404:
-            return WrapperException("The requested resource does not exist");
+            return const WrapperException(
+                "The requested resource does not exist");
           case 405:
-            return WrapperException(
+            return const WrapperException(
                 "Method not allowed. Please check the Allow header for the allowed HTTP methods");
           case 415:
-            return WrapperException(
+            return const WrapperException(
                 "Unsupported media type. The requested content type or version number is invalid");
           case 422:
-            return WrapperException("Data validation failed");
+            return const WrapperException("Data validation failed");
           case 429:
-            return WrapperException("Too many requests");
+            return const WrapperException("Too many requests");
           case 500:
-            return WrapperException("Server internal error");
+            return const WrapperException("Server internal error");
         }
-        return WrapperException("Oops something went wrong!");
+        return const WrapperException("Oops something went wrong!");
 
       case DioExceptionType.cancel:
-        return WrapperException("Server canceled it");
+        return const WrapperException("Server canceled it");
 
       case DioExceptionType.connectionError:
-        return WrapperException("Connection Error");
+        return const WrapperException("Connection Error");
 
       case DioExceptionType.unknown:
-        return WrapperException("Unknown error");
+        return const WrapperException("Unknown error");
     }
   }
 }
@@ -85,7 +86,7 @@ class BaseException implements Exception {
 class WrapperException implements Exception {
   final String msg;
 
-  WrapperException([this.msg = 'Unknown Error']);
+  const WrapperException([this.msg = 'Unknown Error']);
 
   @override
   String toString() => msg;

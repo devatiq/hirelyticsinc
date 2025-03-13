@@ -25,13 +25,13 @@ class TabletAboutUsSection extends StatelessWidget {
             style: AppTextStyles.titleTextStyle(context,
                 fontSize: Dimens.fontSize25),
           ),
-          Gap(16),
+          const Gap(16),
           Text(
             atHirelyticsWeAreDedicatedTo,
             style: AppTextStyles.subtitleTextStyle(context,
                 fontSize: Dimens.fontSize16),
           ),
-          Gap(32),
+          const Gap(32),
           const StackImageViewWidget(
             bigImage: Assets.aboutImage1,
             smallImage: Assets.aboutImage2,

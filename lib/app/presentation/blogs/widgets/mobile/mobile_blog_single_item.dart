@@ -38,7 +38,7 @@ class MobileBlogSingleItem extends StatelessWidget {
               alignment: Alignment.center,
             ),
             Padding(
-              padding: EdgeInsets.all(Dimens.padding8),
+              padding: const EdgeInsets.all(Dimens.padding8),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -53,7 +53,7 @@ class MobileBlogSingleItem extends StatelessWidget {
                     children: List.generate(
                         item.category.length,
                         (i) => Container(
-                              padding: EdgeInsets.symmetric(
+                              padding: const EdgeInsets.symmetric(
                                   horizontal: Dimens.padding8),
                               decoration: BoxDecoration(
                                   color: Theme.of(context)

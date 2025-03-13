@@ -20,7 +20,7 @@ class MobileServiceCardWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      padding: EdgeInsets.all(Dimens.padding16),
+      padding: const EdgeInsets.all(Dimens.padding16),
       decoration: BoxDecoration(
           color: AppColors.colorWhite,
           borderRadius: BorderRadius.circular(Dimens.borderRadius16)),
@@ -36,13 +36,13 @@ class MobileServiceCardWidget extends StatelessWidget {
                   fit: BoxFit.cover,
                 )),
           ),
-          Gap(24),
+          const Gap(24),
           Text(
             title,
             style: AppTextStyles.titleTextStyle(context,
                 fontSize: Dimens.fontSize20),
           ),
-          Gap(16),
+          const Gap(16),
           Text(
             description,
             style: AppTextStyles.subtitleTextStyle(context,

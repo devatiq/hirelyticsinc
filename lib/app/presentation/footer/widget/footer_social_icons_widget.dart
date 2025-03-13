@@ -28,8 +28,8 @@ class FooterSocialIconsWidget extends StatelessWidget {
         child: Container(
           height: 50,
           width: 50,
-          padding: EdgeInsets.all(Dimens.padding10),
-          decoration: BoxDecoration(
+          padding: const EdgeInsets.all(Dimens.padding10),
+          decoration: const BoxDecoration(
               color: AppColors.colorWhite, shape: BoxShape.circle),
           child: SvgPicture.asset(assets),
         ),

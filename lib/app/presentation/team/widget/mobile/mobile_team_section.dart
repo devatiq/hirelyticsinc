@@ -11,7 +11,7 @@ class MobileTeamSection extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final provider = ref.watch(teamProvider);
     return Container(
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: provider.when(
         error: (error, stackTrace) => Text(error.toString()),
         loading: () => const Center(child: CircularProgressIndicator()),
@@ -20,7 +20,7 @@ class MobileTeamSection extends ConsumerWidget {
             shrinkWrap: true,
             primary: false,
             physics: const NeverScrollableScrollPhysics(),
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 1,
                 mainAxisSpacing: Dimens.padding16,
                 crossAxisSpacing: Dimens.padding16,

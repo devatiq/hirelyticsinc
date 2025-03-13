@@ -1,3 +1,4 @@
+/*
 import 'dart:isolate';
 import 'dart:ui';
 
@@ -8,9 +9,7 @@ ReceivePort locationIsolatePort = ReceivePort();
 void registerLocationIsolate() {
   IsolateNameServer.registerPortWithName(
       locationIsolatePort.sendPort, backgroundLocationIsolateName);
-  locationIsolatePort.listen((data) {
-    print('location isolate data $data');
-  });
+  locationIsolatePort.listen((data) {});
 }
 
 @pragma('vm:entry-point')
@@ -19,3 +18,4 @@ void locationIsolateCallback(dynamic data) {
       IsolateNameServer.lookupPortByName(backgroundLocationIsolateName);
   sendPort?.send(data);
 }
+*/

@@ -58,7 +58,7 @@ class _MobileContactFormCardWidgetState
     final formState = ref.watch(formSubmitProvider);
 
     return Container(
-      padding: EdgeInsets.all(Dimens.padding16),
+      padding: const EdgeInsets.all(Dimens.padding16),
       width: double.infinity,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(Dimens.borderRadius16),
@@ -68,9 +68,9 @@ class _MobileContactFormCardWidgetState
         children: [
           Text(sendUsAMessageText,
               style: AppTextStyles.titleTextStyle(context, fontSize: 25)),
-          Gap(40),
+          const Gap(40),
           _buildForms(context),
-          Gap(40),
+          const Gap(40),
           formState.isLoading
               ? const Center(child: CircularProgressIndicator())
               : InkWell(
@@ -80,7 +80,7 @@ class _MobileContactFormCardWidgetState
                   child: Container(
                     width: double.infinity,
                     alignment: Alignment.center,
-                    padding: EdgeInsets.symmetric(vertical: Dimens.padding16),
+                    padding: const EdgeInsets.symmetric(vertical: Dimens.padding16),
                     decoration: BoxDecoration(
                         color: context.colorScheme.primary,
                         borderRadius:
@@ -109,9 +109,9 @@ class _MobileContactFormCardWidgetState
                       data:
                           '<span style = "text-align:center;color:green;font-size:12px">$message</span>',
                     )
-                  : SizedBox.shrink();
+                  : const SizedBox.shrink();
             },
-            loading: () => SizedBox.shrink(),
+            loading: () => const SizedBox.shrink(),
             error: (error, _) => Html(
               data:
                   '<div style = "text-align:center;align:center; color:red;font-size:12px">${error.toString()}</div>',

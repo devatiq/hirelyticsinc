@@ -44,12 +44,12 @@ void showAppSnackBar(
           ? null
           : alignBottom
               ? null
-              : EdgeInsets.only(bottom: 110),
+              : const EdgeInsets.only(bottom: 110),
 
       content: Container(
           padding: isFixed
               ? null
-              : padding ?? EdgeInsets.symmetric(horizontal: 8, vertical: 12),
+              : padding ?? const EdgeInsets.symmetric(horizontal: 8, vertical: 12),
           decoration: BoxDecoration(
             color: isFixed ? null : color,
             borderRadius: hasRadius ? BorderRadius.circular(4) : null,

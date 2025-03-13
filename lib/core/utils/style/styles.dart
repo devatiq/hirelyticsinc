@@ -14,4 +14,4 @@ const BorderRadius curvedTopBorderRadius = BorderRadius.only(
   topRight: Radius.circular(30),
 );
 
-final horizontalPadding = EdgeInsets.symmetric(horizontal: Dimens.horizontalSpace);
+final horizontalPadding = const EdgeInsets.symmetric(horizontal: Dimens.horizontalSpace);

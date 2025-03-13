@@ -23,78 +23,75 @@ class MobileTeamDetailsPage extends StatelessWidget {
         title: Text(model.name),
       ),
       body: SafeArea(
-        child: Container(
-          decoration: BoxDecoration(),
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                Padding(
-                  padding: EdgeInsets.symmetric(
-                      horizontal: Dimens.horizontalSpace,
-                      vertical: Dimens.verticalSpace),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      ClipRRect(
-                          borderRadius:
-                              BorderRadius.circular(Dimens.borderRadius10),
-                          child: GreyScaleWithBackgroundWidget(child: image)),
-                      const Gap(Dimens.padding16),
-                      Text(model.name,
-                          style: AppTextStyles.titleTextStyle(context,
-                              fontSize: Dimens.fontSize24)),
-                      const Gap(Dimens.padding16),
-                      Text(model.designation,
-                          style: AppTextStyles.subtitleTextStyle(context,
-                              fontSize: Dimens.fontSize18)),
-                      const Gap(Dimens.padding16),
-                      Row(
-                        mainAxisSize: MainAxisSize.min,
-                        spacing: Dimens.padding16,
-                        children: List.generate(
-                          model.socials.length,
-                          (index) {
-                            final social = model.socials[index];
-                            return InkWell(
-                              onTap: social.url.trim().isEmpty
-                                  ? null
-                                  : () => UrlLauncherHelper.launchURL(
-                                      data: social.url,
-                                      type: UrlLaunchType.url),
-                              child: Container(
-                                  padding:
-                                      const EdgeInsets.all(Dimens.padding8),
-                                  height: Dimens.iconSize36,
-                                  width: Dimens.iconSize36,
-                                  decoration: BoxDecoration(
-                                      color: Theme.of(context)
-                                          .colorScheme
-                                          .secondary,
-                                      borderRadius: BorderRadius.circular(
-                                          Dimens.borderRadius6)),
-                                  child: SvgPicture.asset(
-                                    social.assetIcon,
-                                    colorFilter: ColorFilter.mode(
-                                        AppColors.colorWhite, BlendMode.srcIn),
-                                  )),
-                            );
-                          },
-                        ),
-                      ),
-                      const Gap(Dimens.padding16),
-                      Text(
-                        model.details,
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                    horizontal: Dimens.horizontalSpace,
+                    vertical: Dimens.verticalSpace),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    ClipRRect(
+                        borderRadius:
+                            BorderRadius.circular(Dimens.borderRadius10),
+                        child: GreyScaleWithBackgroundWidget(child: image)),
+                    const Gap(Dimens.padding16),
+                    Text(model.name,
+                        style: AppTextStyles.titleTextStyle(context,
+                            fontSize: Dimens.fontSize24)),
+                    const Gap(Dimens.padding16),
+                    Text(model.designation,
                         style: AppTextStyles.subtitleTextStyle(context,
-                            fontFamily: GoogleFonts.montserrat().fontFamily,
-                            fontSize: Dimens.fontSize14),
+                            fontSize: Dimens.fontSize18)),
+                    const Gap(Dimens.padding16),
+                    Row(
+                      mainAxisSize: MainAxisSize.min,
+                      spacing: Dimens.padding16,
+                      children: List.generate(
+                        model.socials.length,
+                        (index) {
+                          final social = model.socials[index];
+                          return InkWell(
+                            onTap: social.url.trim().isEmpty
+                                ? null
+                                : () => UrlLauncherHelper.launchURL(
+                                    data: social.url,
+                                    type: UrlLaunchType.url),
+                            child: Container(
+                                padding:
+                                    const EdgeInsets.all(Dimens.padding8),
+                                height: Dimens.iconSize36,
+                                width: Dimens.iconSize36,
+                                decoration: BoxDecoration(
+                                    color: Theme.of(context)
+                                        .colorScheme
+                                        .secondary,
+                                    borderRadius: BorderRadius.circular(
+                                        Dimens.borderRadius6)),
+                                child: SvgPicture.asset(
+                                  social.assetIcon,
+                                  colorFilter: const ColorFilter.mode(
+                                      AppColors.colorWhite, BlendMode.srcIn),
+                                )),
+                          );
+                        },
                       ),
-                      const Gap(Dimens.padding16),
-                    ],
-                  ),
+                    ),
+                    const Gap(Dimens.padding16),
+                    Text(
+                      model.details,
+                      style: AppTextStyles.subtitleTextStyle(context,
+                          fontFamily: GoogleFonts.montserrat().fontFamily,
+                          fontSize: Dimens.fontSize14),
+                    ),
+                    const Gap(Dimens.padding16),
+                  ],
                 ),
-                MobileFooterSection()
-              ],
-            ),
+              ),
+              const MobileFooterSection()
+            ],
           ),
         ),
       ),
@@ -113,6 +110,6 @@ class MobileTeamDetailsPage extends StatelessWidget {
         fit: BoxFit.fill,
       );
     }
-    return SizedBox.shrink();
+    return const SizedBox.shrink();
   }
 }

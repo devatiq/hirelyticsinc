@@ -22,11 +22,11 @@ class MobileAppDrawer extends ConsumerWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Gap(16),
+                const Gap(16),
                 TextButton.icon(
                   onPressed: () => closeDrawer(context),
                   icon: Icon(Icons.adaptive.arrow_back),
-                  label: Text('Close'),
+                  label: const Text('Close'),
                 ),
                 ListTile(
                   title: Text(Menu.home.title),

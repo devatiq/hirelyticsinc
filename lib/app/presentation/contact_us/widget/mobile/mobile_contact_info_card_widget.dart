@@ -13,7 +13,7 @@ class MobileContactInfoCardWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(Dimens.padding16),
+      padding: const EdgeInsets.all(Dimens.padding16),
       decoration: BoxDecoration(
           gradient: AppColors.kGradiantContact,
           borderRadius: BorderRadius.circular(Dimens.borderRadius16)),
@@ -23,7 +23,7 @@ class MobileContactInfoCardWidget extends StatelessWidget {
           Text(contactUsText,
               style: AppTextStyles.titleTextStyle(context,
                   fontSize: Dimens.fontSize25, color: AppColors.colorWhite)),
-          Gap(Dimens.padding32),
+          const Gap(Dimens.padding32),
           _buildContactInfo(context,
               title: emailText,
               data: organizationContactEmail,
@@ -50,7 +50,7 @@ class MobileContactInfoCardWidget extends StatelessWidget {
   }
 
   Widget _divider() {
-    return Divider(height: Dimens.padding48, color: Colors.white);
+    return const Divider(height: Dimens.padding48, color: Colors.white);
   }
 
   Widget _buildContactInfo(BuildContext context,
@@ -61,7 +61,7 @@ class MobileContactInfoCardWidget extends StatelessWidget {
     return Row(
       children: [
         Container(
-          padding: EdgeInsets.all(Dimens.padding8),
+          padding: const EdgeInsets.all(Dimens.padding8),
           decoration: BoxDecoration(
             color: AppColors.colorWhite,
             borderRadius: BorderRadius.circular(Dimens.borderRadius8),
@@ -72,7 +72,7 @@ class MobileContactInfoCardWidget extends StatelessWidget {
             color: AppColors.colorBlack,
           ),
         ),
-        Gap(Dimens.padding16),
+        const Gap(Dimens.padding16),
         Flexible(
           child: Column(
             mainAxisSize: MainAxisSize.min,
@@ -80,7 +80,7 @@ class MobileContactInfoCardWidget extends StatelessWidget {
             children: [
               Text(
                 title,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: Dimens.fontSize14,
                   color: AppColors.colorWhite,
                 ),
@@ -89,7 +89,7 @@ class MobileContactInfoCardWidget extends StatelessWidget {
                 onTap: onTap,
                 child: Text(
                   data,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: Dimens.fontSize16,
                     color: AppColors.colorWhite,
                   ),

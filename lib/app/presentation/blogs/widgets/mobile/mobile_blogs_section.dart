@@ -13,9 +13,8 @@ class MobileBlogsSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.symmetric(horizontal: Dimens.horizontalSpace),
-      decoration: BoxDecoration(),
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: Dimens.horizontalSpace),
       child: Column(
         children: [
           Text(
@@ -33,13 +32,13 @@ class MobileBlogsSection extends StatelessWidget {
                 return Center(
                     child: Row(
                   children: [
-                    Expanded(child: Divider(endIndent: Dimens.padding16)),
+                    const Expanded(child: Divider(endIndent: Dimens.padding16)),
                     Text(
                       noBlogsFound,
                       style: AppTextStyles.subtitleTextStyle(context,
                           fontSize: Dimens.fontSize16),
                     ),
-                    Expanded(child: Divider(indent: Dimens.padding16)),
+                    const Expanded(child: Divider(indent: Dimens.padding16)),
                   ],
                 ));
               }
@@ -49,16 +48,16 @@ class MobileBlogsSection extends StatelessWidget {
                   itemCount: blogs.length + 1,
                   shrinkWrap: true,
                   primary: false,
-                  physics: NeverScrollableScrollPhysics(),
-                  separatorBuilder: (_, __) => Gap(Dimens.padding16),
+                  physics: const NeverScrollableScrollPhysics(),
+                  separatorBuilder: (_, __) => const Gap(Dimens.padding16),
                   itemBuilder: (context, index) {
                     if (index < blogs.length) {
                       return MobileBlogSingleItem(item: blogs[index]);
                     } else if (blogNotifier.hasMore) {
                       blogNotifier.fetchBlogs();
-                      return Center(child: CircularProgressIndicator());
+                      return const Center(child: CircularProgressIndicator());
                     } else {
-                      return SizedBox.shrink();
+                      return const SizedBox.shrink();
                     }
                   });
             },

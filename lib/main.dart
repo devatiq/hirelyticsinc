@@ -11,7 +11,7 @@ void main() async {
 
   await setup();
 
-  runApp(ProviderScope(child: const MyApp()));
+  runApp(const ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -20,7 +20,6 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    //FirebaseMessaging.instance.getToken().then((token) => print(token));
     return MaterialApp.router(
       title: AppConstants.appName,
       debugShowCheckedModeBanner: false,

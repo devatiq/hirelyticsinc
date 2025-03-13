@@ -11,9 +11,9 @@ class MobileContactUsSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: Dimens.horizontalSpace),
+      padding: const EdgeInsets.symmetric(horizontal: Dimens.horizontalSpace),
       //decoration: BoxDecoration(),
-      child: Column(
+      child: const Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Gap(40),

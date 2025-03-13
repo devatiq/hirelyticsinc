@@ -21,7 +21,7 @@ class LearnMoreButton extends ConsumerWidget {
         provider.scrollToIndex(Menu.contact.indexValue);
       },
       child: Container(
-        padding: EdgeInsets.symmetric(
+        padding: const EdgeInsets.symmetric(
             horizontal: Dimens.padding24, vertical: Dimens.padding12),
         decoration: BoxDecoration(
           color: backgroundColor,

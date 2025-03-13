@@ -21,61 +21,60 @@ class MobileFooterSection extends StatelessWidget {
     final textColor = AppColors.colorWhite;
     return Container(
       decoration: BoxDecoration(color: background),
-      padding: EdgeInsets.symmetric(horizontal: Dimens.horizontalSpace),
+      padding: const EdgeInsets.symmetric(horizontal: Dimens.horizontalSpace),
       child: DefaultTextStyle(
         style: TextStyle(
             color: textColor, fontFamily: GoogleFonts.montserrat().fontFamily),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Gap(40),
+            const Gap(40),
             SvgPicture.asset(Assets.logoWhiteSvg, height: Dimens.iconSize40),
-            Gap(16),
+            const Gap(16),
             Text(
               connectText,
               style: AppTextStyles.titleTextStyle(context,
                   fontSize: 20, color: textColor),
             ),
-            Gap(16),
+            const Gap(16),
             _buildSocialIcons(context),
-            Gap(16),
+            const Gap(16),
             _buildAddress(context,
                 icon: Assets.locationPinSvg,
                 data: organizationContactAddress,
                 onTap: () => UrlLauncherHelper.launchURL(
-                    data: organizationLocationMapUrl,
-                    type: UrlLaunchType.url)),
-            Gap(16),
+                    data: organizationLocationMapUrl, type: UrlLaunchType.url)),
+            const Gap(16),
             _buildAddress(context,
                 icon: Assets.callDialSvg,
                 data: organizationContactPhone1,
                 onTap: () => UrlLauncherHelper.launchURL(
                     data: organizationContactPhone1,
                     type: UrlLaunchType.phone)),
-            Gap(16),
+            const Gap(16),
             _buildAddress(context,
                 icon: Assets.telephoneDialSvg,
                 data: organizationContactPhone2,
                 onTap: () => UrlLauncherHelper.launchURL(
                     data: organizationContactPhone2,
                     type: UrlLaunchType.phone)),
-            Gap(16),
+            const Gap(16),
             _buildAddress(context,
                 icon: Assets.emailSendSvg,
                 data: organizationContactEmail,
                 onTap: () => UrlLauncherHelper.launchURL(
                     data: organizationContactEmail, type: UrlLaunchType.email)),
-            Gap(16),
-            Divider(color: Colors.grey),
-            Gap(16),
+            const Gap(16),
+            const Divider(color: Colors.grey),
+            const Gap(16),
             Center(
               child: Text.rich(
                   textAlign: TextAlign.center,
                   TextSpan(children: [
-                    TextSpan(text: copyrightText),
-                    TextSpan(text: ' | '),
-                    TextSpan(text: developedByText),
-                    TextSpan(text: ' '),
+                    const TextSpan(text: copyrightText),
+                    const TextSpan(text: ' | '),
+                    const TextSpan(text: developedByText),
+                    const TextSpan(text: ' '),
                     WidgetSpan(
                         child: InkWell(
                             onTap: () => UrlLauncherHelper.launchURL(
@@ -89,7 +88,7 @@ class MobileFooterSection extends StatelessWidget {
                             ))),
                   ])),
             ),
-            Gap(40),
+            const Gap(40),
           ],
         ),
       ),
@@ -127,7 +126,7 @@ class MobileFooterSection extends StatelessWidget {
                   context.colorScheme.primary, BlendMode.srcIn),
             ),
           ),
-          Gap(20),
+          const Gap(20),
           Flexible(child: Text(data)),
         ],
       ),

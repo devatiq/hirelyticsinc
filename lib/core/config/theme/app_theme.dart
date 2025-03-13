@@ -15,7 +15,7 @@ class AppTheme {
     return ThemeData(
         textTheme: _buildTextTheme(),
         useMaterial3: true,
-        colorScheme: ColorScheme.dark());
+        colorScheme: const ColorScheme.dark());
   }
 
   static ThemeData _buildThemeLight() {

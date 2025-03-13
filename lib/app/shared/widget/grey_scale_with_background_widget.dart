@@ -9,7 +9,7 @@ class GreyScaleWithBackgroundWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ColorFiltered(
-      colorFilter: ColorFilter.matrix(
+      colorFilter: const ColorFilter.matrix(
         [
           // Adjusting brightness (91%) and grayscale (saturate(0%))
           0.2126 * 0.91, 0.7152 * 0.91, 0.0722 * 0.91, 0, 0, // Red

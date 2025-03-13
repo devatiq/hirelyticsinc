@@ -15,8 +15,8 @@ class TabletServiceSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: Dimens.horizontalSpace),
-      decoration: BoxDecoration(gradient: AppColors.kGreyGradiant),
+      padding: const EdgeInsets.symmetric(horizontal: Dimens.horizontalSpace),
+      decoration: const BoxDecoration(gradient: AppColors.kGreyGradiant),
       child: Column(
         children: [
           const Gap(40),
@@ -35,7 +35,7 @@ class TabletServiceSection extends StatelessWidget {
                 fontSize: Dimens.fontSize16),
           ),
           const Gap(16),
-          LearnMoreButton(),
+          const LearnMoreButton(),
           const Gap(32),
         ],
       ),

@@ -27,7 +27,7 @@ class TabletLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScrollablePositionedList.builder(
       itemCount: items.length,
-      physics: ClampingScrollPhysics(),
+      physics: const ClampingScrollPhysics(),
       itemScrollController: itemScrollController,
       itemBuilder: (context, index) => items[index],
     );

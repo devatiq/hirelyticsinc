@@ -18,7 +18,7 @@ class TitleSubtitleTextViewWidget extends StatelessWidget {
           title,
           style: AppTextStyles.titleTextStyle(context, fontSize: 18),
         ),
-        Gap(8),
+        const Gap(8),
         Text(
           subtitle,
           style: AppTextStyles.subtitleTextStyle(context, fontSize: 16),

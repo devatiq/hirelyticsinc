@@ -14,12 +14,11 @@ class MobileWhyChooseUsSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.symmetric(horizontal: Dimens.horizontalSpace),
-      decoration: BoxDecoration(),
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: Dimens.horizontalSpace),
       child: Column(
         children: [
-          Gap(40),
+          const Gap(40),
           Text(
             keyChallengesKeepingText,
             textAlign: TextAlign.center,
@@ -34,25 +33,25 @@ class MobileWhyChooseUsSection extends StatelessWidget {
           const Gap(16),
           _buildCard(context),
           const Gap(16),
-          StackImageViewWidget(
+          const StackImageViewWidget(
             bigImage: Assets.chooseUsImage1,
             smallImage: Assets.chooseUsImage2,
             smallImageAlignmentRight: 0,
             smallImageAlignmentBottom: 10,
           ),
-          Gap(16),
+          const Gap(16),
           Text(
             whyHirelyticsText,
             style: AppTextStyles.titleTextStyle(context, fontSize: 25),
           ),
-          Gap(16),
+          const Gap(16),
           Text(
             atHirelyticsWeDontJustSolveProblems,
             style: AppTextStyles.subtitleTextStyle(context, fontSize: 16),
           ),
-          Gap(16),
+          const Gap(16),
           _buildChooseList(context),
-          Gap(32),
+          const Gap(32),
         ],
       ),
     );

@@ -13,7 +13,7 @@ class LocalNotificationManager extends NotificationManager {
 
   LocalNotificationManager._();
 
-  final AndroidNotificationChannel channel = AndroidNotificationChannel(
+  final AndroidNotificationChannel channel = const AndroidNotificationChannel(
     'hirelytics', // id
     'Hirelytics Notification', // title
     description: 'This channel is used for hirelytics notifications.',
@@ -21,7 +21,7 @@ class LocalNotificationManager extends NotificationManager {
     playSound: true,
   );
 
-  InitializationSettings initializationSettings = InitializationSettings(
+  InitializationSettings initializationSettings = const InitializationSettings(
     android: AndroidInitializationSettings('@mipmap/ic_launcher'),
     iOS: DarwinInitializationSettings(),
   );
@@ -53,7 +53,7 @@ class LocalNotificationManager extends NotificationManager {
             //largeIcon: DrawableResourceAndroidBitmap('@mipmap/ic_launcher'),
             category: AndroidNotificationCategory.event);
     DarwinNotificationDetails iOSNotificationDetails =
-        DarwinNotificationDetails(
+    const DarwinNotificationDetails(
       presentSound: true,
       presentBadge: true,
       presentBanner: true,

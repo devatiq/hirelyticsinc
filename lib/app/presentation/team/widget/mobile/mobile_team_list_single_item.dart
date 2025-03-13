@@ -31,15 +31,15 @@ class MobileTeamListSingleItem extends StatelessWidget {
           Expanded(
             child: GreyScaleWithBackgroundWidget(child: image),
           ),
-          Gap(Dimens.padding16),
+          const Gap(Dimens.padding16),
           Text(item.name,
               style: AppTextStyles.titleTextStyle(context,
                   fontSize: Dimens.fontSize24)),
-          Gap(Dimens.padding8),
+          const Gap(Dimens.padding8),
           Text(item.designation,
               style: AppTextStyles.subtitleTextStyle(context,
                   fontSize: Dimens.fontSize18)),
-          Gap(Dimens.padding8),
+          const Gap(Dimens.padding8),
           Row(
             mainAxisSize: MainAxisSize.min,
             spacing: Dimens.padding16,
@@ -62,7 +62,7 @@ class MobileTeamListSingleItem extends StatelessWidget {
                               BorderRadius.circular(Dimens.borderRadius6)),
                       child: SvgPicture.asset(
                         social.assetIcon,
-                        colorFilter: ColorFilter.mode(
+                        colorFilter:const ColorFilter.mode(
                             AppColors.colorWhite, BlendMode.srcIn),
                       )),
                 );
@@ -83,7 +83,7 @@ class MobileTeamListSingleItem extends StatelessWidget {
                   textStyle: AppTextStyles.titleTextStyle(context,
                       fontSize: Dimens.fontSize16)),
               iconAlignment: IconAlignment.end,
-              child: Text(viewBioText))
+              child: const Text(viewBioText))
         ],
       ),
     );
@@ -99,6 +99,6 @@ class MobileTeamListSingleItem extends StatelessWidget {
         fit: BoxFit.cover,
       );
     }
-    return SizedBox.shrink();
+    return const SizedBox.shrink();
   }
 }
