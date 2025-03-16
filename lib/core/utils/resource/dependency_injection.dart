@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/services.dart';
 import 'package:get_it/get_it.dart';
 import 'package:hirelyticsinc/app/data/respository/repository_impl.dart';
@@ -12,7 +14,7 @@ import '../../notification/firebase_notification_manager.dart';
 final getIt = GetIt.instance;
 
 Future<void> setup() async {
-  //await _deviceOrientation();
+  await _deviceOrientation();
 
   await _initNotification();
 
@@ -45,8 +47,14 @@ Future<void> initDirectory() async {
 }
 
 Future<void> _deviceOrientation() async {
-  await SystemChrome.setPreferredOrientations(
-      [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
+  if (Platform.isIOS) {
+    await SystemChrome.setEnabledSystemUIMode(
+      SystemUiMode.manual,
+      overlays: [SystemUiOverlay.bottom, SystemUiOverlay.top],
+    );
+  }
+  // await SystemChrome.setPreferredOrientations(
+  //     [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
 }
 
 // Future<void> _registerHive() async {
