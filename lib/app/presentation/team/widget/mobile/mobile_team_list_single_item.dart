@@ -62,7 +62,7 @@ class MobileTeamListSingleItem extends StatelessWidget {
                               BorderRadius.circular(Dimens.borderRadius6)),
                       child: SvgPicture.asset(
                         social.assetIcon,
-                        colorFilter:const ColorFilter.mode(
+                        colorFilter: const ColorFilter.mode(
                             AppColors.colorWhite, BlendMode.srcIn),
                       )),
                 );
@@ -80,9 +80,10 @@ class MobileTeamListSingleItem extends StatelessWidget {
                 context.goNamed(Routes.memberDetails, extra: item);
               },
               style: TextButton.styleFrom(
-                  textStyle: AppTextStyles.titleTextStyle(context,
-                      fontSize: Dimens.fontSize16)),
-              iconAlignment: IconAlignment.end,
+                textStyle: AppTextStyles.titleTextStyle(context,
+                    fontSize: Dimens.fontSize16),
+                iconAlignment: IconAlignment.end,
+              ),
               child: const Text(viewBioText))
         ],
       ),
