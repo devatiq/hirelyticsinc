@@ -4,6 +4,8 @@ import '../core/config/router/app_router.dart';
 import '../core/config/theme/app_theme.dart';
 import '../core/utils/constants/app_constants.dart';
 
+/// The Widget that configures your application
+/// This class is the configuration for the entire application
 class App extends StatelessWidget {
   const App({super.key});
 

@@ -11,8 +11,26 @@ import '../../../app/domain/usecase/submit_form_use_case.dart';
 import '../../network/base_api_service.dart';
 import '../../notification/firebase_notification_manager.dart';
 
+/// GetIt Instance for Dependency Injection
+/// It is used to register all the dependencies
+/// and services that are used in the application
+///
+/// It is a singleton class
+/// Dependency can be retrieved using
+///
+/// ```final instanceOfT = getIt<T>();```
+///
+///
 final getIt = GetIt.instance;
 
+
+/// Dependency Injection
+/// Should be called before runApp();
+/// It registers all the dependencies
+/// that are used in the application
+///
+/// Also initializes all the services including
+/// Notification Services, Database Services etc.
 Future<void> setup() async {
   await _deviceOrientation();
 
